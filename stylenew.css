@@ -1,0 +1,936 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafd;
+            color: #1e2a3a;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .logo, .nav-links a, .btn {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navbar (sama seperti sebelumnya, dengan sedikit sentuhan) */
+        .navbar {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px 16px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            margin-left: 16px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+        }
+
+        .logo-text h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0F52BA, #1E3A8A);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #D4AF37;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: 0.2s;
+            font-size: 1rem;
+            padding: 6px 0;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #D4AF37;
+            border-bottom: 2px solid #D4AF37;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: #0F52BA;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.95rem;
+            box-shadow: 0 6px 14px rgba(15, 82, 186, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #0a3d8f;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px rgba(15, 82, 186, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #0F52BA;
+            color: #0F52BA;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background: #0F52BA;
+            color: white;
+        }
+
+        /* Pages */
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .page.active-page {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        /* ========= HOME MODERN ========= */
+        /* Hero dengan efek gelombang */
+        .hero-modern {
+            position: relative;
+            background: linear-gradient(105deg, #ffffff 0%, #f0f5ff 100%);
+            padding: 60px 0 80px;
+            overflow: hidden;
+        }
+        .hero-modern .wave-bg {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+        .hero-content-modern {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-text-modern {
+            flex: 1.2;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(15, 82, 186, 0.1);
+            backdrop-filter: blur(4px);
+            padding: 6px 16px;
+            border-radius: 40px;
+            color: #0F52BA;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            border: 1px solid rgba(15,82,186,0.2);
+        }
+        .hero-text-modern h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0a2540;
+        }
+        .hero-text-modern h1 .highlight {
+            color: #D4AF37;
+            background: linear-gradient(135deg, #D4AF37, #b58d1f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #2d4a6e;
+            margin: 24px 0 32px;
+            max-width: 550px;
+            line-height: 1.5;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .stat-item h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0F52BA;
+        }
+        .stat-item p {
+            font-size: 0.85rem;
+            color: #4a627a;
+        }
+        .hero-image-modern {
+            flex: 0.9;
+            position: relative;
+            text-align: center;
+        }
+        .floating-card {
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.2);
+            padding: 20px;
+            display: inline-block;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-card i {
+            font-size: 6rem;
+            color: #0F52BA;
+        }
+
+        /* Section umum */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: #0F52BA;
+        }
+        .section-sub {
+            text-align: center;
+            color: #4a5568;
+            margin-bottom: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Keunggulan Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+            border: 1px solid #eef2ff;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: #D4AF37;
+            box-shadow: 0 25px 30px -15px rgba(15,82,186,0.15);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #0F52BA;
+        }
+        .feature-card p {
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        /* Statistik modern */
+        .stats-section {
+            background: linear-gradient(120deg, #0F52BA, #1a3f7a);
+            border-radius: 48px;
+            padding: 48px 32px;
+            margin: 60px 0;
+            color: white;
+        }
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            gap: 32px;
+        }
+        .stats-container .stat-block h3 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #FFD966;
+        }
+        .stats-container .stat-block p {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Layanan Unggulan (enhanced) */
+        .service-enhanced {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e9edf2;
+             transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 20px 30px rgba(15, 82, 186, 0.15);
+        }
+        .service-img {
+            background: linear-gradient(145deg, #eef2fa, #e2e8f2);
+            padding: 30px;
+            text-align: center;
+            font-size: 3rem;
+            color: #0F52BA;
+        }
+        .service-info {
+            padding: 24px;
+        }
+        .service-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #0F52BA;
+        }
+        .price-tag {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #D4AF37;
+            margin: 12px 0;
+        }
+
+        /* Testimonial */
+        .testimonial-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0 60px;
+            justify-content: center;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px;
+            flex: 1;
+            min-width: 260px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+        }
+        .testimonial-card i.fa-quote-left {
+            color: #D4AF37;
+            font-size: 1.6rem;
+            opacity: 0.5;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .client-info i {
+            font-size: 2rem;
+            color: #0F52BA;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(115deg, #0F52BA, #103a6b);
+            border-radius: 48px;
+            padding: 48px 40px;
+            text-align: center;
+            color: white;
+            margin: 48px 0;
+        }
+        .cta-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .cta-banner .btn-primary {
+            background: #D4AF37;
+            color: #0F52BA;
+            box-shadow: none;
+            margin-top: 16px;
+        }
+        .cta-banner .btn-primary:hover {
+            background: #e7c35c;
+            transform: scale(1.02);
+        }
+
+        /* footer dan komponen lain tetap seperti sebelumnya */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+        .product-img {
+            background: #eef2fa;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #D4AF37;
+        }
+        footer {
+            background: #0F52BA;
+            color: #e2e8f0;
+            padding: 48px 0 24px;
+            border-radius: 32px 32px 0 0;
+            margin-top: 48px;
+        }
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        .wa-btn-fixed {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            width: 56px;
+            height: 56px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+        }
+        .wa-btn-fixed a {
+            color: white;
+            font-size: 2rem;
+        }
+        @media (max-width: 780px) {
+            .hero-text-modern h1 { font-size: 2.2rem; }
+            .nav-flex { flex-direction: column; align-items: stretch; }
+            .nav-links { justify-content: center; }
+            .hero-stats { flex-wrap: wrap; justify-content: center; }
+        }
+        /* ================= ELEMEN GOLD UNTUK SEMUA MENU ================= */
+/* Garis bawah menu aktif lebih tebal dan berwarna emas */
+.nav-links a.active {
+    border-bottom: 3px solid #D4AF37;
+    color: #D4AF37;
+}
+
+/* Tombol dengan sentuhan emas */
+.btn-gold {
+    background: #D4AF37;
+    color: #0F52BA;
+    border: none;
+}
+.btn-gold:hover {
+    background: #e7c35c;
+    transform: translateY(-2px);
+}
+
+/* Border emas pada card di halaman harga */
+.price-card {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+.price-card:hover {
+    border-color: #D4AF37;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
+    transform: translateY(-5px);
+}
+.price-card h3 {
+    color: #D4AF37;
+    border-left: 4px solid #D4AF37;
+    padding-left: 12px;
+}
+
+/* Harga di dalam card */
+.price-table div {
+    border-bottom: 1px dashed #e2e8f0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.price-table div:last-child {
+    border-bottom: none;
+}
+.price-table div span:first-child {
+    font-weight: 600;
+}
+.price-table div span:last-child {
+    color: #D4AF37;
+    font-weight: 800;
+}
+
+/* Form pemesanan elegan */
+.order-form {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+}
+.order-form .form-group input,
+.order-form .form-group select,
+.order-form .form-group textarea {
+    border: 1px solid #cbd5e1;
+    transition: 0.2s;
+}
+.order-form .form-group input:focus,
+.order-form .form-group select:focus,
+.order-form .form-group textarea:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+.order-form button {
+    background: #D4AF37;
+    color: #0F52BA;
+    font-weight: bold;
+}
+.order-form button:hover {
+    background: #e7c35c;
+}
+
+/* Footer premium dengan elemen gold */
+footer {
+    background: linear-gradient(135deg, #0a2e5e, #0F52BA);
+    position: relative;
+    border-top: 3px solid #D4AF37;
+}
+.footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+.footer-flex div h3, .footer-flex div h4 {
+    color: #D4AF37;
+    margin-bottom: 12px;
+}
+.footer-flex div p {
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+.social-icons {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+.social-icons a {
+    color: #D4AF37;
+    font-size: 1.5rem;
+    transition: 0.2s;
+}
+.social-icons a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+footer hr {
+    border-color: #D4AF37;
+    opacity: 0.5;
+    margin: 28px 0 16px;
+}
+/* ========= PERBAIKAN FORM PEMESANAN ========= */
+.order-form {
+    background: white;
+    border-radius: 32px;
+    padding: 40px 32px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.order-form:hover {
+    border-color: #D4AF37;
+    box-shadow: 0 25px 40px -12px rgba(212, 175, 55, 0.2);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0F52BA;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #fefefe;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+}
+
+.order-form button {
+    background: linear-gradient(135deg, #D4AF37, #c9a22c);
+    color: #0F52BA;
+    font-weight: 800;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.order-form button:hover {
+    background: linear-gradient(135deg, #e7c35c, #d4aa2a);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ========= HALAMAN TENTANG KAMI YANG ELEGAN ========= */
+.about-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+.about-card {
+    background: white;
+    border-radius: 48px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.about-header {
+    background: linear-gradient(135deg, #0F52BA, #1a3f7a);
+    padding: 48px 32px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.about-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #FFD966;
+}
+
+.about-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-body {
+    padding: 48px 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    margin: 40px 0;
+}
+
+.about-item {
+    text-align: center;
+    padding: 24px 20px;
+    background: #f8fafd;
+    border-radius: 28px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.about-item:hover {
+    transform: translateY(-6px);
+    border-bottom-color: #D4AF37;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.about-icon {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.about-item h3 {
+    color: #0F52BA;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.about-item p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.contact-gold {
+    background: linear-gradient(120deg, #fff9e8, #fff2d7);
+    border-radius: 28px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 40px;
+    border: 1px solid #D4AF37;
+}
+
+.contact-gold h3 {
+    color: #0F52BA;
+    margin-bottom: 20px;
+}
+
+.contact-gold p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+}
+
+.contact-gold i {
+    color: #D4AF37;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .order-form { padding: 28px 20px; }
+    .about-body { padding: 32px 24px; }
+}
+/* Perbaikan tampilan icon pada gambar produk */
+.product-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #eef2fa, #e2e8f2);
+    height: 200px;
+    border-radius: 28px 28px 0 0;
+}
+
+.product-img i {
+    font-size: 5rem;
+    color: #0F52BA;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover .product-img i {
+    transform: scale(1.05);
+    color: #D4AF37;
+}
+/* ========= PERBAIKAN HERO: SMART QUALITY LEBIH BESAR & SEIMBANG ========= */
+.hero-image-modern {
+    flex: 1; /* biar lebih leluasa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-card {
+    background: white;
+    border-radius: 48px;
+    box-shadow: 0 30px 45px -12px rgba(0,0,0,0.2);
+    padding: 32px 40px;
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+    min-width: 220px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.floating-card i {
+    font-size: 5rem;
+    color: #0F52BA;
+    margin-bottom: 8px;
+}
+
+.floating-card i:first-child {
+    font-size: 4rem;
+}
+
+.floating-card i.fa-id-card {
+    font-size: 2.5rem;
+    margin-left: 8px;
+}
+
+.floating-card div {
+    margin-top: 16px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #D4AF37, #0F52BA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+/* Pada layar lebih kecil, sesuaikan */
+@media (max-width: 780px) {
+    .floating-card {
+        padding: 20px 24px;
+    }
+    .floating-card i {
+        font-size: 3.5rem;
+    }
+    .floating-card div {
+        font-size: 1.1rem;
+    }
+}
+/* Promo banner */
+.promo-banner {
+    background: linear-gradient(135deg, #fff9e8, #fff2d7);
+    border-radius: 28px;
+    padding: 24px 32px;
+    margin: 30px 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-left: 6px solid #D4AF37;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.promo-banner i {
+    font-size: 3rem;
+    color: #D4AF37;
+}
+.promo-banner h3 {
+    color: #0F52BA;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+.promo-banner p {
+    color: #4a5568;
+    margin: 4px 0;
+}
+.discount {
+    color: #D4AF37;
+    font-size: 1.1rem;
+}
+
+/* Harga produk lainnya dengan gambar icon rapi */
+.product-grid .product-img i {
+    font-size: 4rem;
+    color: #0F52BA;
+    transition: 0.2s;
+}
+.product-card:hover .product-img i {
+    transform: scale(1.05);
+    color: #D4AF37;
+}
+
+/* Responsif */
+@media (max-width: 680px) {
+    .promo-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
