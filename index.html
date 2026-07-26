@@ -6,70 +6,74 @@
     <title>SmartPrint Media | Solusi Cetak & Seminar Kit Modern</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stylenew.css">
+    <link rel="stylesheet" href="stylenew.css">
 </head>
 <body>
 
 <div class="navbar">
     <div class="nav-flex">
+        <!-- Logo di sebelah Kiri -->
         <div class="logo">
-           <img src="logo smartprinting.png" alt="SmartPrint Media" class="logo-img" onerror="this.style.display='none'">
+           <img src="logo smartprint noBG.png" alt="SmartPrint Media" class="logo-img" onerror="this.style.display='none'">
            <div class="logo-text">
                 <h2>SmartPrint Media</h2>
                 <span>Digital Printing</span>
             </div>
         </div>
+        
+        <!-- Tombol Hamburger Cantik di sebelah Kanan -->
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menu Navigasi Samping (Sidebar Muncul dari Kanan) -->
         <div class="nav-links">
             <a data-page="home" class="active">Home</a>
             <a data-page="produk">Produk</a>
             <a data-page="harga">Promo</a>
-            <a data-page="pemesanan">Pemesanan</a>
             <a data-page="tentang">Tentang Kami</a>
         </div>
     </div>
 </div>
 
-<!-- Halaman Home (MODERN, DINAMIS) -->
+<!-- Halaman Home -->
 <div id="home" class="page active-page">
-    <!-- Hero Section Modern -->
-    <section class="hero-modern">
-        <div class="container hero-content-modern">
-            <div class="hero-text-modern">
-                <div class="hero-badge"><i class="fas fa-crown"></i>  Solusi Percetakan Terpercaya</div>
-                <h1>Cetak & Seminar Kit <span class="highlight">Berkualitas Premium</span> untuk Event Anda</h1>
-                <p class="hero-desc">ID Card, Lanyard, Kaos, Goodiebag, dan ribuan produk lainnya dengan harga grosir. Didukung desain gratis, pengerjaan kilat & garansi mutu.</p>
-                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                    <a data-page="produk" class="btn-primary"><i class="fas fa-store"></i> Lihat Koleksi</a>
-                    <a data-page="pemesanan" class="btn-outline"><i class="fab fa-whatsapp"></i> Pesan Sekarang</a>
+    <!-- Section Banner Promo (Auto-Slide) -->
+    <section class="promo-slider-section">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <img src="Banner pak yoyok.png" alt="Promo 1" onerror="this.src='https://via.placeholder.com/1280x450/0F52BA/FFFFFF?text=Promo+1+SmartPrint+Media'">
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-item"><h3>500+</h3><p>Klien Puas</p></div>
-                    <div class="stat-item"><h3>2.5k+</h3><p>Proyek Selesai</p></div>
-                    <div class="stat-item"><h3>24h</h3><p>Pengerjaan Cepat</p></div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="banner2.jpg" alt="Promo 2" onerror="this.src='https://via.placeholder.com/1280x450/D4AF37/FFFFFF?text=Promo+2+Seminar+Kit+Premium'">
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="banner3.jpg" alt="Promo 3" onerror="this.src='https://via.placeholder.com/1280x450/1E3A8A/FFFFFF?text=Promo+3+Diskon+Grosir+Event'">
                 </div>
             </div>
-            <div class="hero-image-modern">
-                <div class="floating-card">
-                    <i class="fas fa-print"></i>
-                    <i class="fas fa-id-card" style="font-size: 2rem; margin-left: 10px;"></i>
-                    <div style="margin-top: 12px; font-weight: bold; color:#0F52BA;">Smart Quality</div>
-                </div>
+            
+            <!-- Tombol Navigasi Manual -->
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            
+            <!-- Indikator Dots -->
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
-        <svg class="wave-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="#f8fafd" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
     </section>
 
     <div class="container">
-        <!-- Keunggulan Kami (4 poin) -->
-        <h2 class="section-title" style="margin-top: 40px;">Mengapa Memilih Kami?</h2>
-        <div class="feature-grid">
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-palette"></i></div><h3>Desain Gratis</h3><p>Tim desain profesional siap membantu wujudkan ide Anda tanpa biaya tambahan.</p></div>
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div><h3>Cepat & Tepat Waktu</h3><p>Proses produksi efisien, pesanan ready sesuai deadline event Anda.</p></div>
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-tags"></i></div><h3>Harga Grosir</h3><p>Mulai dari 1 pcs hingga ribuan, harga semakin hemat untuk kebutuhan massal.</p></div>
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-medal"></i></div><h3>Garansi Kualitas</h3><p>Material premium dan kontrol mutu ketat, produk awet dan memuaskan.</p></div>
-        </div>
 
-        <!-- Layanan Unggulan (lebih modern) -->
+        <!-- Layanan Unggulan -->
         <h2 class="section-title">Layanan Unggulan</h2>
         <div class="service-enhanced">
             <div class="service-card"><div class="service-img"><i class="fas fa-id-card"></i></div><div class="service-info"><h3>ID Card + Lanyard</h3><div class="price-tag">Mulai Rp9.000</div><p>PVC custom full color, tali lanyard + stoper, cocok untuk event & korporat.</p></div></div>
@@ -78,104 +82,227 @@
             <div class="service-card"><div class="service-img"><i class="fas fa-mug-hot"></i></div><div class="service-info"><h3>Mug & Tumbler</h3><div class="price-tag">Mulai Rp18.000</div><p>Sablon full warna, tahan cuci, cocok untuk souvenir kantor atau acara.</p></div></div>
         </div>
 
-        <!-- Statistik angka (modern card) -->
-        <div class="stats-section">
-            <div class="stats-container">
-                <div class="stat-block"><h3>1200+</h3><p>Event Tersukses</p></div>
-                <div class="stat-block"><h3>99%</h3><p>Kepuasan Klien</p></div>
-                <div class="stat-block"><h3>15 Kota</h3><p>Cakupan Pengiriman</p></div>
-                <div class="stat-block"><h3>24/7</h3><p>Layanan Konsultasi</p></div>
-            </div>
-        </div>
-
-        <!-- Testimonial Pelanggan -->
-        <h2 class="section-title">Apa Kata Klien Kami?</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Cetakan ID Card dan lanyard sangat berkualitas, pesanan 500 pcs selesai dalam 3 hari. Mantap!"</p><div class="client-info"><i class="fas fa-user-circle"></i><div><strong>Rina S.</strong><br>Event Organizer</div></div></div>
-            <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Desain gratis membantu banget, hasil sablon kaos tim kami bagus dan harga bersahabat. Rekomendasi!"</p><div class="client-info"><i class="fas fa-chalkboard-user"></i><div><strong>Bambang P.</strong><br>Komunitas Olahraga</div></div></div>
-            <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Proses pemesanan cepat via WA, barang sampai tepat waktu, goodiebag seminar elegan. Terima kasih!"</p><div class="client-info"><i class="fas fa-building"></i><div><strong>PT. Vision Media</strong><br>Klien Korporat</div></div></div>
+        <!-- Keunggulan Kami -->
+        <h2 class="section-title" style="margin-top: 40px;">Mengapa Memilih Kami?</h2>
+        <div class="feature-grid">
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-palette"></i></div><h3>Desain Gratis</h3><p>Tim desain profesional siap membantu wujudkan id Anda tanpa biaya tambahan.</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div><h3>Cepat & Tepat Waktu</h3><p>Proses produksi efisien, pesanan ready sesuai deadline event Anda.</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-tags"></i></div><h3>Harga Grosir</h3><p>Mulai dari 1 pcs hingga ribuan, harga semakin hemat untuk kebutuhan massal.</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-truck"></i></div><h3>Gratis Ongkir Sekota Malang</h3><p>Layanan pengiriman gratis untuk wilayah Malang, belanja makin hemat tanpa biaya tambahan.</p></div>
         </div>
 
         <!-- CTA Banner -->
         <div class="cta-banner">
-            <h2>Siap Membuat Event Anda Berkesan?</h2>
-            <p>Dapatkan harga spesial untuk pemesanan di atas 100 pcs + free ongkir untuk wilayah Jogja.</p>
-            <a data-page="pemesanan" class="btn-primary"><i class="fab fa-whatsapp"></i> Konsultasi Sekarang</a>
+            <h2>🚀 BUTUH BANNER CEPAT? AMBIL JALUR PRIORITAS!</h2>
+            <p>Cetak banner Anda kami utamakan di antrean, konsultasi langsung tanpa hambatan, dan waktu pengerjaan jauh lebih singkat. <br> Cukup tambahkan 10.000 saja, deadline aman!</p>
+            <a href="https://wa.me/6285855176141" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i>Klik WA untuk eksekusi sekarang!</a>
         </div>
     </div>
 </div>
 
+<!-- Halaman Produk -->
 <div id="produk" class="page">
     <div class="container">
         <h2 class="section-title" style="margin-top:48px;">Koleksi Lengkap Produk Kami</h2>
         <p class="section-sub">Tersedia berbagai macam produk percetakan, merchandise, dan perlengkapan event dengan kualitas terbaik.</p>
+        
+        <!-- Bar Pencarian Produk -->
+        <div class="search-container">
+            <input type="text" id="search-product-input" placeholder="Cari produk percetakan atau merchandise...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
         <div class="product-grid">
-            <!-- Kaos Sablon -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-tshirt"></i></div><div class="product-info"><h3>Kaos Sablon</h3><div class="price">Mulai Rp35.000</div><div class="detail">Sablon plastisol / DTG, bahan cotton combed 24s.</div></div></div>
-            <!-- Jersey -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-futbol"></i></div><div class="product-info"><h3>Jersey</h3><div class="price">Mulai Rp95.000</div><div class="detail">Jersey sublimasi full print, bahan dryfit.</div></div></div>
-            <!-- Baju PDH -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-shirt"></i></div><div class="product-info"><h3>Baju PDH</h3><div class="price">Mulai Rp120.000</div><div class="detail">Seragam PDH kantor dengan bordir nama.</div></div></div>
-            <!-- Vest/Rompi -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-vest"></i></div><div class="product-info"><h3>Vest / Rompi</h3><div class="price">Mulai Rp65.000</div><div class="detail">Rompi event, sablon/bordir logo.</div></div></div>
-            <!-- Jas Lab -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-flask"></i></div><div class="product-info"><h3>Jas Lab</h3><div class="price">Mulai Rp110.000</div><div class="detail">Jas laboratorium, bordir nama institusi.</div></div></div>
-            <!-- Topi Sablon -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-hat-cowboy"></i></div><div class="product-info"><h3>Topi Sablon</h3><div class="price">Mulai Rp25.000</div><div class="detail">Topi baseball sablon logo, bahan twill.</div></div></div>
-            <!-- Totebag Sablon -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-shopping-bag"></i></div><div class="product-info"><h3>Totebag Sablon</h3><div class="price">Mulai Rp22.000</div><div class="detail">Kanvas alami, sablon 1-2 sisi.</div></div></div>
-            <!-- Bendera -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-flag-checkered"></i></div><div class="product-info"><h3>Bendera</h3><div class="price">Mulai Rp15.000</div><div class="detail">Bendera meja, bendera pole, sablon full warna.</div></div></div>
-            <!-- Stempel -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-stamp"></i></div><div class="product-info"><h3>Stempel</h3><div class="price">Mulai Rp18.000</div><div class="detail">Stempel flash / otomatis, warna tinta.</div></div></div>
-            <!-- Lanyard & ID Card -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-id-card"></i></div><div class="product-info"><h3>Lanyard & ID Card</h3><div class="price">Mulai Rp9.000</div><div class="detail">PVC card custom + lanyard + holder.</div></div></div>
-            <!-- Nametage -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-tag"></i></div><div class="product-info"><h3>Nametage</h3><div class="price">Mulai Rp7.500</div><div class="detail">Name tag akrilik / metal, pin magnet.</div></div></div>
-            <!-- Pin & Ganci Akrilik -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-award"></i></div><div class="product-info"><h3>Pin & Ganci</h3><div class="price">Mulai Rp6.500</div><div class="detail">Cetak custom bentuk bebas, epoxy coating.</div></div></div>
-            <!-- Piala / Trophy -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-trophy"></i></div><div class="product-info"><h3>Piala / Trophy</h3><div class="price">Mulai Rp45.000</div><div class="detail">Piala resin, akrilik, dengan ukiran laser.</div></div></div>
-            <!-- Vandel -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-certificate"></i></div><div class="product-info"><h3>Vandel</h3><div class="price">Mulai Rp35.000</div><div class="detail">Plakat akrilik / kayu, ukiran teks.</div></div></div>
-            <!-- Medali -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-medal"></i></div><div class="product-info"><h3>Medali</h3><div class="price">Mulai Rp8.500</div><div class="detail">Medali acara olahraga, pita warna warni.</div></div></div>
-            <!-- Ballpoint -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-pen"></i></div><div class="product-info"><h3>Ballpoint</h3><div class="price">Mulai Rp2.500</div><div class="detail">Pulpen sablon logo, custom warna.</div></div></div>
-            <!-- Stiker -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-tape"></i></div><div class="product-info"><h3>Stiker</h3><div class="price">Mulai Rp1.500</div><div class="detail">Stiker vinyl / kromo, bentuk custom.</div></div></div>
-            <!-- Sertifikat -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-scroll"></i></div><div class="product-info"><h3>Sertifikat</h3><div class="price">Mulai Rp3.000</div><div class="detail">Cetak sertifikat + kertas glossy / linen.</div></div></div>
-            <!-- Papan Juara -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-chalkboard"></i></div><div class="product-info"><h3>Papan Juara</h3><div class="price">Mulai Rp120.000</div><div class="detail">Papan trophy + sticker nama juara.</div></div></div>
-            <!-- Notebook & Buku Album -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-book"></i></div><div class="product-info"><h3>Notebook & Buku Album</h3><div class="price">Mulai Rp15.000</div><div class="detail">Notebook custom cover, jilid soft/hardcover.</div></div></div>
-            <!-- Buku Modul / Saku -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-book-open"></i></div><div class="product-info"><h3>Buku Modul / Saku</h3><div class="price">Mulai Rp10.000</div><div class="detail">Modul pelatihan, buku saku, ukuran A5.</div></div></div>
-            <!-- Buku Yasin & Tahlil -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-quran"></i></div><div class="product-info"><h3>Buku Yasin & Tahlil</h3><div class="price">Mulai Rp7.500</div><div class="detail">Cover soft/hard, isi lengkap Yasin & Tahlil.</div></div></div>
-            <!-- Undangan -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-envelope-open-text"></i></div><div class="product-info"><h3>Undangan</h3><div class="price">Mulai Rp3.000</div><div class="detail">Cetak undangan pernikahan, aqiqah, custom.</div></div></div>
-            <!-- Gelang Tiket -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-ticket-alt"></i></div><div class="product-info"><h3>Gelang Tiket</h3><div class="price">Mulai Rp2.500</div><div class="detail">Gelang kertas / vinyl, nomor urut.</div></div></div>
-            <!-- Kipas Tangan -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-fan"></i></div><div class="product-info"><h3>Kipas Tangan</h3><div class="price">Mulai Rp4.000</div><div class="detail">Kipas plastik / kertas, sablon kedua sisi.</div></div></div>
-            <!-- Kalender -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-calendar-alt"></i></div><div class="product-info"><h3>Kalender</h3><div class="price">Mulai Rp12.000</div><div class="detail">Kalender meja, dinding, custom desain.</div></div></div>
-            <!-- Mug & Tumbler -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-mug-hot"></i></div><div class="product-info"><h3>Mug & Tumbler</h3><div class="price">Mulai Rp18.000</div><div class="detail">Mug keramik, tumbler stainless, sablon full warna.</div></div></div>
-            <!-- Goodiebag -->
-            <div class="product-card"><div class="product-img"><i class="fas fa-gift"></i></div><div class="product-info"><h3>Goodiebag</h3><div class="price">Mulai Rp15.000</div><div class="detail">Tas goodiebag seminar, sablon logo.</div></div></div>
+             <div class="product-card clickable-product" data-name="Standing Banner (X/Tripod)" data-price="Mulai Rp45.000" data-icon="fas fa-ad" data-img="standing banner.png" data-desc="Media promosi display praktis yang mudah dibongkar pasang. Tersedia pilihan tipe X-Banner ekonomis, Roll Up Banner aluminium premium yang elegan, dan Tripod Banner dua sisi. Dicetak menggunakan bahan Flexy berkualitas tinggi atau albatros laminasi doff/glossy lengkap dengan tiang penyangga yang kokoh untuk tampilan indoor/outdoor.">
+                <div class="product-img">
+                    <img src="standing banner.png" alt="Standing Banner" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-ad" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Banner + Standing(X/Tripod)</h3><div class="price">Mulai Rp45.000</div><div class="detail">Bahan flexy/albatros, lengkap dengan stand.</div></div>
+            </div>
+             <div class="product-card clickable-product" data-name="Banner / Spanduk Custom" data-price="Mulai Rp15.000" data-icon="fas fa-scroll" data-img="banner.png" data-desc="Cetak banner, baliho, backdrop, atau spanduk promosi tanpa batasan ukuran meteran. Menggunakan bahan berkualitas tinggi Flexy (280gr - 440gr) yang kuat, pekat, tahan air, dan tahan paparan sinar matahari outdoor. Sangat ideal untuk promosi toko, reklame jalan raya, maupun dekorasi panggung event besar Anda.">
+                <div class="product-img">
+                    <img src="banner.png" alt="Banner Spanduk Custom" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-scroll" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Banner & Spanduk Custom</h3><div class="price">Mulai Rp15.000 /m²</div><div class="detail">Bahan flexy outdoor/indoor, finishing mata ayam.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Kaos Sablon" data-price="Mulai Rp35.000" data-icon="fas fa-tshirt" data-img="kaos smartprint.png" data-desc="Sablon plastisol / DTG dengan hasil tajam, presisi, dan tidak mudah luntur. Menggunakan bahan kain premium Cotton Combed 24s yang tebal namun sangat adem, menyerap keringat, dan nyaman digunakan untuk aktivitas sehari-hari maupun seragam komunitas Anda.">
+                <div class="product-img">
+                    <img src="kaos smartprint.png" alt="Kaos Sablon" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-tshirt" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Kaos Sablon</h3><div class="price">Mulai Rp35.000</div><div class="detail">Sablon plastisol / DTG, bahan cotton combed 24s.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Jersey" data-price="Mulai Rp95.000" data-icon="fas fa-futbol" data-img="jersey smartprint.png" data-desc="Jersey olahraga premium dengan teknologi sublimasi full print. Warna menyatu sempurna dengan kain, dijamin anti luntur meskipun dicuci berkali-kali. Menggunakan bahan kain dryfit berkualitas tinggi yang berpori, ringan, serta memiliki sirkulasi udara optimal untuk performa olahraga maksimal.">
+                <div class="product-img">
+                    <img src="jersey smartprint.png" alt="Jersey" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-futbol" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Jersey</h3><div class="price">Mulai Rp95.000</div><div class="detail">Jersey sublimasi full print, bahan dryfit.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Baju PDH" data-price="Mulai Rp120.000" data-icon="fas fa-shirt" data-img="pdh smartprint.png" data-desc="Seragam Pakaian Dinas Harian (PDH) profesional yang cocok untuk instansi, perusahaan, maupun organisasi mahasiswa. Dijahit rapi menggunakan opsi bahan premium seperti American Drill atau Nagata Drill. Sudah termasuk fasilitas bordir komputer digital untuk logo dan nama yang presisi dan padat.">
+                <div class="product-img">
+                    <img src="pdh smartprint.png" alt="Baju PDH" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-shirt" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Baju PDH</h3><div class="price">Mulai Rp120.000</div><div class="detail">Seragam PDH kantor dengan bordir nama.</div></div>
+            </div>
+
+            <div class="product-card clickable-product" data-name="Topi Sablon" data-price="Mulai Rp25.000" data-icon="fas fa-hat-cowboy" data-img="topi.png" data-desc="Topi model baseball dan trucker custom yang trendi. Menggunakan bahan kain twill berkualitas atau jaring premium. Dilengkapi setelan ukuran di bagian belakang. Desain logo diaplikasikan menggunakan sablon presisi tinggi atau bordir komputer yang kokoh. Sangat pas untuk merchandise event and komunitas.">
+                <div class="product-img">
+                    <img src="topi.png" alt="Topi" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-hat-cowboy" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Topi Sablon</h3><div class="price">Mulai Rp25.000</div><div class="detail">Topi baseball sablon logo, bahan twill.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Totebag Sablon" data-price="Mulai Rp22.000" data-icon="fas fa-shopping-bag" data-img="totebag.png" data-desc="Tas jinjing (totebag) multifungsi yang ramah lingkungan. Terbuat dari bahan kain kanvas alami berkualitas tinggi yang tebal dan kuat menahan beban berat. Dihiasi cetak sablon tajam pada 1 atau 2 sisi, sangat ideal untuk merchandise promosi, souvenir seminar kit, maupun fashion harian.">
+                <div class="product-img">
+                    <img src="totebag.png" alt="Totebag Sablon" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-shopping-bag" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Totebag Sablon</h3><div class="price">Mulai Rp22.000</div><div class="detail">Kanvas alami, sablon 1-2 sisi.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Bendera" data-price="Mulai Rp15.000" data-icon="fas fa-flag-checkered" data-img="bendera.png" data-desc="Cetak bendera kain kustom full color tanpa batasan desain. Tersedia dalam format bendera meja untuk kebutuhan formal kantor, hingga bendera tiang skala besar. Menggunakan bahan satin atau kain khusus bendera yang mengkilap, ringan, cepat kering, dan dicetak dengan tinta tekstil tajam anti luntur.">
+                <div class="product-img">
+                    <img src="bendera.png" alt="Bendera" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-flag-checkered" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Bendera</h3><div class="price">Mulai Rp15.000</div><div class="detail">Bendera meja, bendera pole, sablon full warna.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Stempel" data-price="Mulai Rp18.000" data-icon="fas fa-stamp" data-img="stempel.png" data-desc="Stempel flash otomatis modern (tanpa bantalan tinta terpisah). Praktis digunakan, tinggal tekan, langsung keluar warna tajam. Tersedia dalam berbagai bentuk (bulat, kotak, oval) serta pilihan warna tinta yang pekat dan cepat kering. Menunjang kebutuhan legalitas administrasi bisnis Anda secara instan.">
+                <div class="product-img">
+                     <img src="stempel.png" alt="Stempel" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                     <i class="fas fa-stamp" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Stempel</h3><div class="price">Mulai Rp18.000</div><div class="detail">Stempel flash / otomatis, warna tinta.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Lanyard & ID Card" data-price="Mulai Rp9.000" data-icon="fas fa-id-card" data-img="lanyard.png" data-desc="Paket bundling eksklusif ID Card berbahan PVC tebal standar kartu ATM bersama tali lanyard custom print bolak-balik. Cetakan high resolution anti pudar dilengkapi holder pelindung kartu. Sangat penting untuk identitas profesional karyawan kantor, panitia event, maupun peserta seminar.">
+                <div class="product-img">
+                     <img src="lanyard.png" alt="Lanyard & ID Card" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                     <i class="fas fa-id-card" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Lanyard & ID Card</h3><div class="price">Mulai Rp9.000</div><div class="detail">PVC card custom + lanyard + holder.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Nametag" data-price="Mulai Rp7.500" data-icon="fas fa-tag" data-img="nametag.png" data-desc="Papan nama dada (name tag) eksklusif dengan pilihan material akrilik mengkilap atau plat logam premium. Dipotong presisi dan dipoles rapi. Menggunakan pengait pin magnet super kuat yang menjamin nametag melekat sempurna di pakaian tanpa merusak atau melubangi serat kain baju Anda.">
+                <div class="product-img">
+                    <img src="nametag.png" alt="Nametag" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-tag" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Nametag</h3><div class="price">Mulai Rp7.500</div><div class="detail">Name tag akrilik / metal, pin magnet.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Pin & Gantungan Kunci" data-price="Mulai Rp6.500" data-icon="fas fa-award" data-img="ganci.png" data-desc="Pin bros dan Gantungan Kunci kustom dengan kebebasan bentuk potong (die-cut). Dilapisi lapisan epoxy coating resin yang bening transparan dan cembung memberikan efek kaca premium 3D. Menjadikan tampilan warna produk sangat mewah, mengkilap, serta terlindung penuh dari goresan atau air.">
+                <div class="product-img">
+                    <img src="ganci.png" alt="Pin & Gantungan Kunci" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-award" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Pin & Gantungan Kunci</h3><div class="price">Mulai Rp6.500</div><div class="detail">Cetak custom bentuk bebas, epoxy coating.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Stiker" data-price="Mulai Rp1.500" data-icon="fas fa-tape" data-img="stiker.png" data-desc="Cetak stiker kustom pelabelan kemasan produk makanan, minuman, kosmetik atau dekorasi komunitas. Diproduksi menggunakan bahan Vinyl (tahan air) atau Cromo berkualitas tinggi, dipotong sesuai pola desain (Kiss-cut/Die-cut) secara presisi dengan daya rekat yang sangat kuat.">
+                <div class="product-img">
+                    <img src="stiker.png" alt="Stiker" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-tape" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Stiker</h3><div class="price">Mulai Rp1.500</div><div class="detail">Stiker vinyl / kromo, bentuk custom.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Sertifikat" data-price="Mulai Rp3.000" data-icon="fas fa-scroll" data-img="sertifikat.png" data-desc="Cetak piagam penghargaan atau sertifikat seminar formal menggunakan kertas khusus bertekstur premium layaknya Kertas Linen atau Art Paper Glossy yang tebal. Menggunakan mesin cetak digital offset untuk menjamin akurasi gradasi warna yang tajam, profesional, dan tinta tidak luntur.">
+                <div class="product-img">
+                    <img src="sertifikat.png" alt="Sertifikat" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-scroll" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Sertifikat</h3><div class="price">Mulai Rp3.000</div><div class="detail">Cetak sertifikat + kertas glossy / linen.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Souvenir Custom" data-price="Mulai Rp15.000" data-icon="fas fa-box-open" data-img="souvenir.png" data-desc="Pilihan souvenir premium custom seperti tumbler grafir logam/kayu, mug coating eksklusif, pulpen event, dan pernak-pernik lainnya. Sangat cocok sebagai corporate gift, kenang-kenangan instansi, hadiah pernikahan, maupun pelengkap kemeriahan acara Anda.">
+                <div class="product-img">
+                   <img src="souvenir.png" alt="Sertifikat" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-scroll" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Souvenir Custom</h3><div class="price">Mulai Rp15.000</div><div class="detail">Tumbler, mug eksklusif, & merchandise.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Notebook" data-price="Mulai Rp20.000" data-icon="fas fa-book-open" data-img="notebook.png" data-desc="Buku catatan kustom berkualitas tinggi dengan pilihan jilid spiral besi atau hard cover lux. Halaman dalam bergaris/polos menggunakan kertas bookpaper premium yang nyaman untuk ditulis. Desain sampul (cover) bisa dicetak full color sesuai branding perusahaan atau acara seminar.">
+                <div class="product-img">
+                    <img src="notebook.png" alt="Notebook" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-book-open" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Notebook</h3><div class="price">Mulai Rp20.000</div><div class="detail">Jilid spiral/hard cover, custom ring.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Kalender" data-price="Mulai Rp12.000" data-icon="fas fa-calendar-alt" data-img="kalender.png" data-desc="Cetak kalender kustom dalam format kalender dinding (jilid klem seng/spiral) maupun kalender meja eksklusif dengan dudukan hardcover tegak. Dicetak tajam di atas kertas Art Carton tebal agar awet sepanjang tahun untuk media promosi bisnis jangka panjang.">
+                <div class="product-img">
+                    <img src="kalender.png" alt="Kalender" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-calendar-alt" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Kalender</h3><div class="price">Mulai Rp12.000</div><div class="detail">Kalender meja & dinding, cetak full color.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Buku Yasin & Tahlil" data-price="Mulai Rp8.500" data-icon="fas fa-book-quran" data-img="yasin dan tahlil.png" data-desc="Cetak buku Yasin dan Tahlil untuk keperluan acara tasyakuran maupun mengenang 40/100/1000 hari wafatnya keluarga tercinta. Tersedia opsi soft cover ekonomis dan hard cover beludru/art paper mewah, lengkap dengan tambahan halaman foto almarhum/almarhumah serta cetak isi yang bersih dan jelas dibaca.">
+                <div class="product-img">
+                    <img src="yasin dan tahlil.png" alt="Buku Yasin & Tahlil" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-book-quran" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Buku Yasin & Tahlil</h3><div class="price">Mulai Rp8.500</div><div class="detail">Soft cover/Hard cover, sisipan foto.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Mug Custom" data-price="Mulai Rp18.000" data-icon="fas fa-mug-hot" data-img="mug.png" data-desc="Mug keramik putih standar SNI yang dicetak sublimasi full warna dengan hasil glossy yang mewah. Menggunakan tinta kualitas tinggi yang meresap sempurna, tahan terhadap cucian berulang kali, aman untuk microwave, dan pas untuk hadiah personal atau souvenir promosi kantor.">
+                <div class="product-img">
+                    <img src="mug.png" alt="Mug Custom" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-mug-hot" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Mug Custom</h3><div class="price">Mulai Rp18.000</div><div class="detail">Keramik putih SNI, sablon coating awet.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Kipas Souvenir" data-price="Mulai Rp3.500" data-icon="fas fa-wind" data-img="kipas.png" data-desc="Kipas tangan berbahan plastik PVC / art carton kustom berbentuk lingkaran atau pola bebas (die-cut) dengan gagang plastik kokoh. Desain dapat dicetak bolak-balik (2 sisi) secara full color. Sangat praktis sebagai media promosi event outdoor, konser musik, maupun souvenir pernikahan yang fungsional.">
+                <div class="product-img">
+                    <img src="kipas.png" alt="Kipas Souvenir" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-wind" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Kipas Souvenir</h3><div class="price">Mulai Rp3.500</div><div class="detail">Gagang plastik, cetak bolak-balik full color.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Undangan Pernikahan" data-price="Mulai Rp2.000" data-icon="fas fa-envelope-open-text" data-img="undangan pernikahan.png" data-desc="Cetak kartu undangan pernikahan impian Anda dengan desain elegan yang bisa disesuaikan sepenuhnya. Tersedia model satu lembar (single board), lipat 2/3, hingga model hardcover mewah. Didukung pilihan kertas bertekstur premium serta opsi pelapis foil emas (hotprint) atau cetak timbul (emboss).">
+                <div class="product-img">
+                    <img src="undangan pernikahan.png" alt="Undangan Pernikahan" class="grid-img-element" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-envelope-open-text" style="display: none;"></i>
+                </div>
+                <div class="product-info"><h3>Undangan Pernikahan</h3><div class="price">Mulai Rp2.000</div><div class="detail">Desain kustom, bahan premium, gratis plastik.</div></div>
+            </div>
+            <div class="product-card clickable-product" data-name="Buku Mewarnai" data-price="Mulai Rp5.000" data-icon="fas fa-palette" data-img="" data-desc="Buku mewarnai edukatif custom untuk kebutuhan merchandise anak sekolah, souvenir ulang tahun, maupun promosi brand. Berisi lembaran sketsa gambar garis yang bersih dan dicetak pada kertas HVS/Bookpaper tebal agar tidak mudah tembus saat diwarnai dengan pensil warna maupun krayon.">
+                <div class="product-img">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="product-info"><h3>Bundling Hampers Custom</h3><div class="price">Mulai Rp5.000</div><div class="detail">Kertas HVS/Bookpaper tebal, sketsa tajam.</div></div>
+            </div>
+        </div> 
+    </div> 
+</div> 
+
+<!-- Halaman Tampilan Full Detail Produk (TERBARU) -->
+<div id="detail-produk" class="page">
+    <div class="container" style="max-width: 800px; padding-top: 48px; padding-bottom: 48px;">
+        <button id="btn-back-produk" class="btn-back"><i class="fas fa-arrow-left"></i> Kembali ke Produk</button>
+        
+        <div class="detail-wrapper-box">
+            <!-- Box Media Kiri (Bisa berupa ikon atau Gambar Mockup) -->
+            <div class="detail-icon-box" style="padding: 20px; background: #ffffff;">
+                <i id="detail-product-icon" class="fas fa-tshirt" style="font-size: 6rem; color: #0F52BA; display: none;"></i>
+                <img id="detail-product-img" src="" alt="Preview Produk" class="detail-img-element" style="width: 100%; height: auto; object-fit: contain; display: none;">
+            </div>
+            <div class="detail-content-box">
+                <h2 id="detail-product-title">Nama Produk</h2>
+                <div id="detail-product-price" class="detail-price-tag">Mulai Rp0</div>
+                <hr class="detail-divider">
+                <h3>Deskripsi Produk:</h3>
+                <p id="detail-product-desc">Spesifikasi produk.</p>
+                
+                <!-- Tombol Pesan Sekarang Terhubung Otomatis ke WA -->
+                <a href="#" id="detail-wa-btn" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 24px;">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang via WhatsApp
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="promo" class="page">
+<div id="harga" class="page">
     <div class="container">
         <h2 class="section-title" style="margin-top:48px;">Daftar Harga Grosir <i class="fas fa-tag" style="color: #D4AF37;"></i></h2>
         <p class="section-sub">Harga per pcs untuk paket ID Card & Lanyard. <span style="color:#D4AF37;">Semakin banyak, semakin hemat!</span></p>
-
-        <!-- PROMO DISKON -->
+        
         <div class="promo-banner">
             <i class="fas fa-gift"></i>
             <div>
@@ -184,7 +311,7 @@
                 <p>Minimal pembelian <strong>200 pcs</strong> mendapatkan <strong>FREE ONGKIR</strong> + diskon 10%</p>
             </div>
         </div>
-
+        
         <div class="price-grid" style="display:flex; gap:32px; justify-content:center; flex-wrap:wrap;">
             <div class="price-card" style="background:white; border-radius:36px; padding:24px; width:320px;">
                 <h3><i class="fas fa-lock"></i> Include Stoper</h3>
@@ -194,7 +321,7 @@
                     <div><span>9 - 15 pcs</span><span>Rp13.000</span></div>
                     <div><span>16 - 50 pcs</span><span>Rp12.000</span></div>
                     <div><span>51 - 100 pcs</span><span>Rp11.000</span></div>
-                    <div><span>&gt;100 pcs</span><span><del>Rp10.000</del> <strong class="discount">Rp9.500</strong> (diskon 5%)</span></div>
+                    <div><span>&gt;100 pcs</span><span><del>Rp10.000</del> <strong class="discount">Rp9.500</strong></span></div>
                 </div>
             </div>
             <div class="price-card" style="background:white; border-radius:36px; padding:24px; width:320px;">
@@ -205,88 +332,9 @@
                     <div><span>9 - 15 pcs</span><span>Rp12.000</span></div>
                     <div><span>16 - 50 pcs</span><span>Rp11.000</span></div>
                     <div><span>51 - 100 pcs</span><span>Rp10.000</span></div>
-                    <div><span>&gt;100 pcs</span><span><del>Rp9.000</del> <strong class="discount">Rp8.550</strong> (diskon 5%)</span></div>
+                    <div><span>&gt;100 pcs</span><span><del>Rp9.000</del> <strong class="discount">Rp8.550</strong></span></div>
                 </div>
             </div>
-        </div>
-
-        <h3 style="text-align:center; margin-top:50px; color:#0F52BA;">🔥 Harga Produk Lainnya (Mulai dari)</h3>
-        <div class="product-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:20px;">
-            <!-- Kaos Sablon dengan gambar -->
-            <div class="product-card">
-                <div class="product-img"><i class="fas fa-tshirt"></i></div>
-                <div class="product-info">
-                    <h3>Kaos Sablon</h3>
-                    <div class="price">Rp30.000</div>
-                    <div class="detail">Minimal 20 pcs</div>
-                </div>
-            </div>
-            <!-- Totebag dengan gambar -->
-            <div class="product-card">
-                <div class="product-img"><i class="fas fa-shopping-bag"></i></div>
-                <div class="product-info">
-                    <h3>Totebag</h3>
-                    <div class="price">Rp19.000</div>
-                    <div class="detail">Sablon 1 sisi</div>
-                </div>
-            </div>
-            <!-- Mug Custom dengan gambar -->
-            <div class="product-card">
-                <div class="product-img"><i class="fas fa-mug-hot"></i></div>
-                <div class="product-info">
-                    <h3>Mug Custom</h3>
-                    <div class="price">Rp18.000</div>
-                    <div class="detail">Minimal 12 pcs</div>
-                </div>
-            </div>
-            <!-- Pin Akrilik dengan gambar -->
-            <div class="product-card">
-                <div class="product-img"><i class="fas fa-award"></i></div>
-                <div class="product-info">
-                    <h3>Pin Akrilik</h3>
-                    <div class="price">Rp6.500</div>
-                    <div class="detail">Minimal 50 pcs</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="pemesanan" class="page">
-    <div class="container">
-        <h2 class="section-title" style="margin-top:48px;">Form Pemesanan <i class="fas fa-pen-alt" style="color:#D4AF37;"></i></h2>
-        <p class="section-sub">Isi data di bawah, tim kami akan segera menghubungi Anda via WhatsApp.</p>
-        <div class="order-form">
-            <form id="orderForm">
-                <div class="form-group">
-                    <label><i class="fas fa-user"></i> Nama Lengkap</label>
-                    <input type="text" id="nama" required placeholder="Contoh: Ahmad Setiawan">
-                </div>
-                <div class="form-group">
-                    <label><i class="fab fa-whatsapp"></i> Nomor WhatsApp</label>
-                    <input type="tel" id="wa" required placeholder="08xx-xxxx-xxxx">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-box"></i> Pilih Produk</label>
-                    <select id="produkSelect">
-                        <option>Paket ID Card + Lanyard (Include Stoper)</option>
-                        <option>Paket ID Card Tanpa Stoper</option>
-                        <option>Kaos Sablon</option>
-                        <option>Totebag Seminar</option>
-                        <option>Mug Custom</option>
-                        <option>Lainnya (tulis di pesan)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-calculator"></i> Jumlah Pesanan</label>
-                    <input type="number" id="qty" placeholder="Minimal 1 pcs">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-comment"></i> Pesan Tambahan / Desain</label>
-                    <textarea rows="3" id="pesan" placeholder="Warna, ukuran, file desain, dll."></textarea>
-                </div>
-                <button type="button" id="sendWa"><i class="fab fa-whatsapp"></i> Kirim ke WhatsApp</button>
-            </form>
-            <p style="margin-top: 28px; text-align: center; color: #4a5568;">Atau hubungi langsung <strong style="color:#D4AF37;">085855176141</strong></p>
         </div>
     </div>
 </div>
@@ -300,82 +348,94 @@
                 <p>Mitra terpercaya untuk kebutuhan percetakan, merchandise, dan perlengkapan event Anda.</p>
             </div>
             <div class="about-body">
-                <div class="about-grid">
-                    <div class="about-item">
-                        <div class="about-icon"><i class="fas fa-history"></i></div>
-                        <h3>Sejarah</h3>
-                        <p>Berdiri sejak 2015, SmartPrint Media telah melayani ribuan pelanggan dari berbagai instansi, perusahaan, hingga event organizer di seluruh Indonesia.</p>
-                    </div>
-                    <div class="about-item">
-                        <div class="about-icon"><i class="fas fa-bullseye"></i></div>
-                        <h3>Visi & Misi</h3>
-                        <p><strong>Visi:</strong> Menjadi pusat solusi percetakan digital terdepan.<br>
-                        <strong>Misi:</strong> Produk inovatif, tepat waktu, pelayanan terbaik.</p>
-                    </div>
-                    <div class="about-item">
-                        <div class="about-icon"><i class="fas fa-handshake"></i></div>
-                        <h3>Keunggulan</h3>
-                        <p>✔️ Free desain<br>✔️ Proses cepat & garansi<br>✔️ Harga grosir kompetitif<br>✔️ Dukungan sponsorship event</p>
-                    </div>
-                </div>
+                <p>Kami hadir memberikan kemudahan cetak custom untuk segala kebutuhan instansi, universitas, komunitas, maupun perorangan dengan standar kualitas premium dan layanan pengerjaan kilat.</p>
                 <div class="contact-gold">
-                    <h3><i class="fas fa-map-marker-alt"></i> Alamat & Kontak</h3>
-                    <p><i class="fas fa-location-dot"></i> Jl. Mergan, Kelurahan Blok D1 No. 38</p>
-                    <p><i class="fab fa-whatsapp"></i> 085855176141 | <i class="fab fa-instagram"></i> @smartprintmedia</p>
-                      <p><i class="far fa-clock"></i> Senin - Sabtu: 08.00 - 21.00</p>
+                    <h3>Hubungi Operational Kami</h3>
+                    <p><i class="fab fa-whatsapp"></i> 085855176141</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Mergan, Kelurahan Blok D1 No. 38</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- REVISI PREMIUM FOOTER (4 KOLOM) -->
 <footer>
     <div class="container">
         <div class="footer-flex">
-            <div>
+            <!-- Kolom 1: Profil Perusahaan -->
+            <div class="footer-col brand-col">
                 <h3>SmartPrint Media</h3>
-                <p>Solusi cetak & merchandise event terpercaya sejak 2015.</p>
+                <p>Karena Setiap Detail Tulisan dan Warna Adalah Reputasi Anda.</p>
                 <div class="social-icons">
-                    <a href="https://instagram.com/SmartPrint Media" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://instagram.com/smartprint_media" target="_blank">
+                        <i class="fab fa-instagram"></i> <span>@smartprint_media</span>
+                    </a>
                 </div>
             </div>
-            <div>
-                <h4>Kontak Kami</h4>
-                <p><i class="fab fa-whatsapp"></i> 085855176141</p>
-                <p><i class="far fa-envelope"></i> smartprintmedia@gmail.com</p>
+
+            <!-- Kolom 2: Navigasi Cepat -->
+            <div class="footer-col links-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a onclick="showPage('home')"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a onclick="showPage('produk')"><i class="fas fa-chevron-right"></i> Produk Cetak</a></li>
+                    <li><a onclick="showPage('harga')"><i class="fas fa-chevron-right"></i> Promo Grosir</a></li>
+                    <li><a onclick="showPage('tentang')"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+                </ul>
             </div>
-            <div>
+
+            <!-- Kolom 3: Kontak Operasional -->
+            <div class="footer-col contact-col">
+                <h4>Kontak Kami</h4>
+                <p><a href="https://wa.me/6285855176141" target="_blank" style="color: #b8c7da; text-decoration: none; font-weight: 600;"><i class="fab fa-whatsapp"></i> 085855176141</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Mergan, Kel. Blok D1 No. 38, Malang</p>
+            </div>
+
+            <!-- Kolom 4: Jam Kerja -->
+            <div class="footer-col hours-col">
                 <h4>Jam Operasional</h4>
-                <p>Senin - Sabtu: 08.00 - 21.00</p>
-                <p>Minggu: 09.00 - 17.00</p>
+                <p><i class="far fa-clock"></i> Senin - Sabtu:<br><span>08.00 - 21.00</span></p>
+                <p><i class="far fa-clock"></i> Minggu:<br><span>09.00 - 17.00</span></p>
             </div>
         </div>
         <hr>
-        <div style="text-align:center; color: #D4AF37;">&copy; 2026 SmartPrint Media | Premium Quality with <i class="fas fa-crown"></i> Gold Standard</div>
+        <div class="footer-bottom">
+            &copy; 2026 SmartPrint Media | Premium Quality with <i class="fas fa-crown"></i> Gold Standard
+        </div>
     </div>
 </footer>
+
 <div class="wa-btn-fixed"><a href="https://wa.me/6285855176141" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
 
 <script>
-    // SPA Navigation
     const pages = {
         home: document.getElementById('home'),
         produk: document.getElementById('produk'),
-        harga: document.getElementById('promo'),
-        pemesanan: document.getElementById('pemesanan'),
-        tentang: document.getElementById('tentang')      
+        harga: document.getElementById('harga'),
+        tentang: document.getElementById('tentang'),
+        'detail-produk': document.getElementById('detail-produk')
     };
+
     function showPage(pageId) {
-        Object.values(pages).forEach(page => page.classList.remove('active-page'));
-        pages[pageId].classList.add('active-page');
+        Object.keys(pages).forEach(key => {
+            if(pages[key]) pages[key].classList.remove('active-page');
+        });
+        if(pages[pageId]) pages[pageId].classList.add('active-page');
+        
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.classList.remove('active');
             if(link.getAttribute('data-page') === pageId) link.classList.add('active');
         });
+
+        if(pageId === 'detail-produk') {
+            const productMenu = document.querySelector('.nav-links a[data-page="produk"]');
+            if(productMenu) productMenu.classList.add('active');
+        }
+
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -383,24 +443,127 @@
             if(pageId && pages[pageId]) showPage(pageId);
         });
     });
-    document.querySelectorAll('[data-page]').forEach(el => {
-        if(el.classList && (el.classList.contains('btn-primary') || el.classList.contains('btn-outline'))) {
-            el.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = el.getAttribute('data-page');
-                if(pageId && pages[pageId]) showPage(pageId);
+
+    // SISTEM DRIVER KLIK DETAIL PRODUK DENGAN DUKUNGAN MOCKUP GAMBAR (SPA)
+    document.querySelectorAll('.clickable-product').forEach(card => {
+        card.addEventListener('click', () => {
+            const name = card.getAttribute('data-name');
+            const price = card.getAttribute('data-price');
+            const iconClass = card.getAttribute('data-icon');
+            const description = card.getAttribute('data-desc');
+            const imageSrc = card.getAttribute('data-img');
+
+            document.getElementById('detail-product-title').innerText = name;
+            document.getElementById('detail-product-price').innerText = price;
+            document.getElementById('detail-product-desc').innerText = description;
+            
+            const iconEl = document.getElementById('detail-product-icon');
+            const imgEl = document.getElementById('detail-product-img');
+
+            if (imageSrc && imageSrc.trim() !== "") {
+                iconEl.style.display = 'none';
+                imgEl.setAttribute('src', imageSrc);
+                imgEl.style.display = 'block';
+            } else {
+                imgEl.style.display = 'none';
+                iconEl.className = ''; 
+                iconEl.className = iconClass;
+                iconEl.style.display = 'block';
+            }
+
+            const waNumber = "6285855176141";
+            const message = encodeURIComponent(`Halo SmartPrint Media, saya tertarik dan ingin memesan produk *${name}* (${price}). Bagaimana prosedur pemesanan selanjutnya?`);
+            document.getElementById('detail-wa-btn').setAttribute('href', `https://wa.me/${waNumber}?text=${message}`);
+
+            showPage('detail-produk');
+        });
+    });
+
+    document.getElementById('btn-back-produk').addEventListener('click', () => {
+        showPage('produk');
+    });
+
+    // SISTEM PENCARIAN PRODUK REAL-TIME FILTER
+    const searchInput = document.getElementById('search-product-input');
+    const productCards = document.querySelectorAll('.clickable-product');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const filterValue = searchInput.value.toLowerCase().trim();
+            productCards.forEach(card => {
+                const productName = card.getAttribute('data-name').toLowerCase();
+                if (productName.includes(filterValue)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // SCRIPT AUTO-SLIDER BANNER PROMO
+    const wrapper = document.querySelector('.slider-wrapper');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    let currentIndex = 0;
+    let slideInterval;
+
+    function updateSlider() {
+        if(wrapper) wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function startAutoSlide() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 4000);
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
             });
         }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                if (menuToggle) menuToggle.classList.remove('active');
+            });
+        });
     });
-    document.getElementById('sendWa')?.addEventListener('click', function(){
-        let nama = document.getElementById('nama').value;
-        let wa = document.getElementById('wa').value;
-        let produk = document.getElementById('produkSelect').value;
-        let qty = document.getElementById('qty').value;
-        let pesan = document.getElementById('pesan').value;
-        let text = `Halo SmartPrint Media%0A%0ASaya ingin memesan:%0AProduk: ${produk}%0AJumlah: ${qty}%0ANama: ${nama}%0ANo WA: ${wa}%0APesan: ${pesan}`;
-        window.open(`https://wa.me/6285855176141?text=${text}`, '_blank');
+    
+    if(nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoSlide(); });
+    if(prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoSlide(); });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+            startAutoSlide();
+        });
     });
+
+    startAutoSlide();
 </script>
 </body>
 </html>
