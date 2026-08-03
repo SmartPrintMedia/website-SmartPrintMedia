@@ -640,7 +640,54 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
 /* =========================================================
    MEDIA QUERIES (KHUSUS TAMPILAN MOBILE & TABLET DI PALING BATAH)
    ========================================================= */
-@media (max-width: 992px) {
+@media (max-width: 600px) {
+
+    /* 1. Memperbesar Tinggi Banner Promo di HP */
+    .promo-slider-section {
+        padding: 10px 0 !important;
+    }
+
+    .slider-container {
+        border-radius: 16px !important;
+    }
+
+    .slide {
+        /* Mengubah aspek rasio agar banner lebih tinggi & gambar lebih besar di HP */
+        aspect-ratio: 16 / 9 !important; 
+        height: 200px !important; /* Menjamin tinggi minimal agar banner tidak pipih */
+    }
+
+    .slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important; /* Memastikan gambar terisi penuh tanpa gepeng */
+    }
+
+    /* 2. Memperbaiki Tombol Panah Slider (Sedang, Jelas, & Pas) */
+    .slider-btn {
+        width: 36px !important;        /* Ukuran tombol pas untuk jari jempol */
+        height: 36px !important;       /* Ukuran tombol pas */
+        font-size: 0.95rem !important;  /* Ukuran ikon panah diperjelas */
+        background: rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    /* Mengatur jarak tombol dari pinggir banner */
+    .prev-btn {
+        left: 10px !important;
+    }
+
+    .next-btn {
+        right: 10px !important;
+    }
+
+    /* Indikator Titik (Dots) */
+    .slider-dots {
+        bottom: 10px !important;
+    }
+}
+
+   @media (max-width: 992px) {
     .footer-flex {
         grid-template-columns: 1fr 1fr;
         gap: 40px 24px;
@@ -709,9 +756,20 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         width: 100% !important;
         justify-content: center !important;
     }
+    .cta-banner .btn-primary {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;              /* Jarak antara logo WA dan teks */
+        padding: 14px 24px !important;      /* Ketebalan tombol */
+        font-size: 0.95rem !important;      /* Ukuran teks tombol */
+        font-weight: 700 !important;
+        width: 100% !important;             /* Lebar penuh agar proporsional */
+    }
     .cta-banner .btn-primary i {
-        font-size: 1.4rem !important;
-        margin-right: 6px !important;
+        font-size: 1.8rem !important;      /* Ukuran ikon WA diperbesar proporsional */
+        line-height: 1 !important;
+        margin-right: 0 !important;         /* Menggunakan gap flex untuk kerapian */
     }
 
     /* 4. Grid Katalog Produk */
