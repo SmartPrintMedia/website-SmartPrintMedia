@@ -323,6 +323,39 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 .feature-card h3 { font-size: 1.5rem; margin-bottom: 12px; color: #0F52BA; }
 .feature-card p { color: #4a5568; line-height: 1.5; }
 
+/* ===== OVERRIDE PAKSA LAYOUT 2 KOLOM DI HP ===== */
+@media screen and (max-width: 768px) {
+    /* 1. Paksa Mengapa Memilih Kami Jadi 2 Kolom */
+    .feature-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Paksa 2 kolom setara */
+        gap: 12px !important;
+        margin: 20px 0 !important;
+    }
+
+    .feature-card {
+        padding: 16px 10px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+    }
+
+    .feature-icon {
+        font-size: 2.2rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .feature-card h3 {
+        font-size: 0.95rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .feature-card p {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
 /* Layanan Unggulan */
 .service-enhanced {
     display: grid;
@@ -402,39 +435,6 @@ h1, h2, h3, .logo, .nav-links a, .btn {
         margin: 4px 0 0 0 !important;
         font-weight: 800 !important;
     }
-    /* ===== RESPONSIF MENGAPA MEMILIH KAMI (2 KOLOM DI HP) ===== */
-/* ===== OVERRIDE PAKSA LAYOUT 2 KOLOM DI HP ===== */
-@media screen and (max-width: 768px) {
-    /* 1. Paksa Mengapa Memilih Kami Jadi 2 Kolom */
-    .feature-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Paksa 2 kolom setara */
-        gap: 12px !important;
-        margin: 20px 0 !important;
-    }
-
-    .feature-card {
-        padding: 16px 10px !important;
-        border-radius: 16px !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
-    }
-
-    .feature-icon {
-        font-size: 2.2rem !important;
-        margin-bottom: 8px !important;
-    }
-
-    .feature-card h3 {
-        font-size: 0.95rem !important;
-        line-height: 1.2 !important;
-        margin-bottom: 6px !important;
-    }
-
-    .feature-card p {
-        font-size: 0.75rem !important;
-        line-height: 1.3 !important;
-    }
-
     /* 2. Paksa Layanan Unggulan Jadi 2 Kolom */
     .service-enhanced {
         display: grid !important;
