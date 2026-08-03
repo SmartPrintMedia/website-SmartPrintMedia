@@ -304,7 +304,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 .feature-card h3 { font-size: 1.5rem; margin-bottom: 12px; color: #0F52BA; }
 .feature-card p { color: #4a5568; line-height: 1.5; }
 
-/* Layanan Unggulan */
+/* Layanan Unggulan Grid */
 .service-enhanced {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -319,22 +319,19 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     border: 1px solid #e9edf2;
     transition: transform 0.25s ease, box-shadow 0.3s ease;
 }
-.service-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 30px rgba(15, 82, 186, 0.15);
+.service-card.clickable-product {
+    cursor: pointer;
 }
-.service-img {
-    background: linear-gradient(145deg, #eef2fa, #e2e8f2);
-    padding: 30px;
-    text-align: center;
-    font-size: 3rem;
-    color: #0F52BA;
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #D4AF37;
+    box-shadow: 0 18px 30px -8px rgba(15, 82, 186, 0.18);
 }
 .service-info { padding: 24px; }
 .service-info h3 { font-size: 1.5rem; margin-bottom: 8px; color: #0F52BA; }
 .price-tag { font-size: 1.3rem; font-weight: 800; color: #D4AF37; margin: 12px 0; }
 
-/* ===== PRODUCT GRID ===== */
+/* ===== PRODUCT GRID & GAMBAR ===== */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -705,16 +702,6 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         overflow: hidden !important;
     }
 
-    .service-img {
-        height: 85px !important;
-        padding: 10px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-
-    .service-img i { font-size: 2.2rem !important; }
-
     .service-info {
         padding: 10px 8px !important;
         display: flex !important;
@@ -773,7 +760,7 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         margin-right: 0 !important;
     }
 
-    /* 4. KATALOG PRODUK GRID */
+    /* 4. KATALOG PRODUK GRID & GAMBAR HP */
     .product-grid {
         grid-template-columns: repeat(2, 1fr) !important; 
         gap: 10px !important;
