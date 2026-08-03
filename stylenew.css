@@ -353,6 +353,69 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 .service-info h3 { font-size: 1.5rem; margin-bottom: 8px; color: #0F52BA; }
 .price-tag { font-size: 1.3rem; font-weight: 800; color: #D4AF37; margin: 12px 0; }
 
+/* ===== PENYESUAIAN MOBILE (HP) ===== */
+@media (max-width: 600px) {
+    /* 1. Layanan Unggulan di Home Menjadi 2 Kolom */
+    .service-enhanced {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        margin: 24px 0 !important;
+    }
+
+    .service-card {
+        border-radius: 16px !important;
+    }
+
+    .service-img {
+        padding: 16px 8px !important;
+        font-size: 2rem !important;
+    }
+
+    .service-info {
+        padding: 12px 10px !important;
+    }
+
+    .service-info h3 {
+        font-size: 0.95rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .price-tag {
+        font-size: 0.85rem !important;
+        margin: 6px 0 !important;
+    }
+
+    .service-info p {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* 2. CTA Banner Agar Tidak Lonjong */
+    .cta-banner {
+        border-radius: 16px !important; /* Diubah dari 36px agar sudut tidak melengkung lonjong */
+        padding: 28px 16px !important;  /* Menyesuaikan padding agar tidak terlalu tinggi */
+        margin: 32px 0 !important;
+    }
+
+    .cta-banner h2 {
+        font-size: 1.25rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .cta-banner p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .cta-banner .btn-primary {
+        font-size: 0.85rem !important;
+        padding: 10px 18px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
 /* ===== PRODUCT GRID & CARDS CLEAN LOOK (RESPONSIVE FIXED) ===== */
 .product-grid {
     display: grid;
@@ -696,7 +759,7 @@ footer {
     border-top: 4px solid #D4AF37;
     color: #e2e8f0;
     padding: 60px 0 24px;
-    border-radius: 40px 40px 0 0;
+    border-radius: 0;
     margin-top: 80px;
 }
 
@@ -845,7 +908,7 @@ footer hr {
 @media (max-width: 576px) {
     footer {
         padding: 40px 0 20px;
-        border-radius: 24px 24px 0 0;
+       border-radius: 0;
     }
     .footer-flex {
         grid-template-columns: 1fr;
