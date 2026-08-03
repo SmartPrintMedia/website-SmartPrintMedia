@@ -359,36 +359,55 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     .service-enhanced {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px !important;
-        margin: 24px 0 !important;
+        margin: 20px 0 !important;
     }
 
     .service-card {
-        border-radius: 16px !important;
+        border-radius: 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 100% !important;
     }
 
     .service-img {
-        padding: 16px 8px !important;
-        font-size: 2rem !important;
+        padding: 20px 10px !important;
+        font-size: 2.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 110px !important;
     }
 
     .service-info {
         padding: 12px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+        justify-content: space-between !important;
     }
 
     .service-info h3 {
         font-size: 0.95rem !important;
-        line-height: 1.3 !important;
+        line-height: 1.25 !important;
+        margin-bottom: 4px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
     }
 
     .price-tag {
         font-size: 0.85rem !important;
-        margin: 6px 0 !important;
+        margin: 4px 0 0 0 !important;
+        font-weight: 800 !important;
     }
 
+    /* Sembunyikan deskripsi panjang di HP agar rapi seperti katalog produk */
     .service-info p {
-        font-size: 0.75rem !important;
-        line-height: 1.3 !important;
+        display: none !important;
     }
+}
 
     /* 2. CTA Banner Agar Tidak Lonjong */
     .cta-banner {
@@ -415,7 +434,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
         width: 100% !important;
         justify-content: center !important;
     }
-}
+
 /* ===== PRODUCT GRID & CARDS CLEAN LOOK (RESPONSIVE FIXED) ===== */
 .product-grid {
     display: grid;
