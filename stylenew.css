@@ -402,6 +402,45 @@ h1, h2, h3, .logo, .nav-links a, .btn {
         margin: 4px 0 0 0 !important;
         font-weight: 800 !important;
     }
+    /* ===== RESPONSIF MENGAPA MEMILIH KAMI (2 KOLOM DI HP) ===== */
+@media (max-width: 600px) {
+    /* Mengubah grid Keunggulan menjadi 2 kolom */
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        margin: 20px 0 !important;
+    }
+
+    /* Menyesuaikan ukuran kartu keunggulan */
+    .feature-card {
+        padding: 16px 10px !important;
+        border-radius: 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+    }
+
+    /* Ukuran ikon disesuaikan agar pas */
+    .feature-icon {
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Ukuran judul keunggulan */
+    .feature-card h3 {
+        font-size: 0.9rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* Ukuran deskripsi keunggulan */
+    .feature-card p {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+}
 
     /* Sembunyikan deskripsi panjang di HP agar rapi seperti katalog produk */
     .service-info p {
