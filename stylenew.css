@@ -186,7 +186,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     to { opacity: 1; transform: translateY(0);}
 }
 
-/* PROMO SLIDER */
+/* PROMO SLIDER DESKTOP */
 .promo-slider-section {
     width: 100%;
     background-color: #f0f4f8;
@@ -638,56 +638,10 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
 .footer-bottom { text-align: center; color: #D4AF37; font-size: 0.9rem; font-weight: 500; }
 
 /* =========================================================
-   MEDIA QUERIES (KHUSUS TAMPILAN MOBILE & TABLET DI PALING BATAH)
+   MEDIA QUERIES (RESPONSIF TABLET & HP DI PALING BWAH)
    ========================================================= */
-@media (max-width: 600px) {
 
-    /* 1. Memperbesar Tinggi Banner Promo di HP */
-    .promo-slider-section {
-        padding: 10px 0 !important;
-    }
-
-    .slider-container {
-        border-radius: 16px !important;
-    }
-
-    .slide {
-        /* Mengubah aspek rasio agar banner lebih tinggi & gambar lebih besar di HP */
-        aspect-ratio: 16 / 9 !important; 
-        height: 200px !important; /* Menjamin tinggi minimal agar banner tidak pipih */
-    }
-
-    .slide img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important; /* Memastikan gambar terisi penuh tanpa gepeng */
-    }
-
-    /* 2. Memperbaiki Tombol Panah Slider (Sedang, Jelas, & Pas) */
-    .slider-btn {
-        width: 36px !important;        /* Ukuran tombol pas untuk jari jempol */
-        height: 36px !important;       /* Ukuran tombol pas */
-        font-size: 0.95rem !important;  /* Ukuran ikon panah diperjelas */
-        background: rgba(255, 255, 255, 0.9) !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-    }
-
-    /* Mengatur jarak tombol dari pinggir banner */
-    .prev-btn {
-        left: 10px !important;
-    }
-
-    .next-btn {
-        right: 10px !important;
-    }
-
-    /* Indikator Titik (Dots) */
-    .slider-dots {
-        bottom: 10px !important;
-    }
-}
-
-   @media (max-width: 992px) {
+@media (max-width: 992px) {
     .footer-flex {
         grid-template-columns: 1fr 1fr;
         gap: 40px 24px;
@@ -698,92 +652,139 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
     .logo-text h2 { font-size: 1.1rem; }
     .logo-img { height: 45px; }
     .nav-flex { padding: 12px 16px; }
-    .menu-toggle { width:38px; height:30px; padding:5px; }
-    .menu-toggle span { height:3px; }
-    .menu-toggle.active span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
-    .menu-toggle.active span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+    .menu-toggle { width: 38px; height: 30px; padding: 5px; }
+    .menu-toggle span { height: 3px; }
+    .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
 
-@media (max-width: 600px) {
-    /* 1. Layanan Unggulan & Mengapa Memilih Kami Paksa 2 Kolom */
-    .service-enhanced,
-    .feature-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-        margin: 20px 0 !important;
+@media screen and (max-width: 600px) {
+    /* 1. BANNER PROMO TINGGI & JELAS */
+    .promo-slider-section {
+        padding: 8px 0 !important;
     }
 
-    .service-card,
-    .feature-card {
+    .slider-container {
         border-radius: 16px !important;
-        padding: 12px 8px !important;
     }
 
-    .service-img {
-        height: 125px !important;
-        padding: 10px !important;
+    .slider-wrapper, .slide {
+        height: 185px !important;
+        aspect-ratio: auto !important;
     }
 
-    .service-img i { font-size: 3.5rem !important; }
-    .service-img img { max-height: 110px !important; object-fit: contain !important; }
-    .service-info p { display: none !important; } /* Sembunyikan p agar kompak */
+    .slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
 
-    .feature-icon { font-size: 2rem !important; margin-bottom: 8px !important; }
-    .feature-card h3 { font-size: 0.9rem !important; line-height: 1.25 !important; }
-    .feature-card p { font-size: 0.75rem !important; line-height: 1.3 !important; }
-
-    /* 2. Tombol Slider Panah Diperkecil */
     .slider-btn {
-        width: 28px !important;
-        height: 28px !important;
-        font-size: 0.75rem !important;
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.85rem !important;
         background: rgba(255, 255, 255, 0.9) !important;
     }
     .prev-btn { left: 8px !important; }
     .next-btn { right: 8px !important; }
 
-    /* 3. CTA Banner Tidak Lonjong & Icon WA Diperbesar */
-    .cta-banner {
-        border-radius: 16px !important;
-        padding: 28px 16px !important;
-        margin: 32px 0 !important;
+    /* 2. LAYANAN UNGGULAN & MENGAPA MEMILIH KAMI (2 KOLOM SEJAJAR) */
+    .service-enhanced,
+    .feature-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin: 16px 0 !important;
     }
-    .cta-banner h2 { font-size: 1.25rem !important; line-height: 1.3 !important; }
-    .cta-banner p { font-size: 0.85rem !important; line-height: 1.4 !important; }
-    .cta-banner .btn-primary {
-        font-size: 0.95rem !important;
-        padding: 12px 20px !important;
-        width: 100% !important;
+
+    .service-card {
+        border-radius: 14px !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+    }
+
+    .service-img {
+        height: 85px !important;
+        padding: 10px !important;
+        display: flex !important;
+        align-items: center !important;
         justify-content: center !important;
     }
+
+    .service-img i { font-size: 2.2rem !important; }
+
+    .service-info {
+        padding: 10px 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        flex-grow: 1 !important;
+    }
+
+    .service-info h3 {
+        font-size: 0.85rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 4px !important;
+        font-weight: 700 !important;
+    }
+
+    .price-tag {
+        font-size: 0.8rem !important;
+        margin: 4px 0 0 0 !important;
+        font-weight: 800 !important;
+    }
+
+    .service-info p { display: none !important; }
+
+    .feature-card {
+        padding: 12px 8px !important;
+        border-radius: 14px !important;
+    }
+
+    .feature-icon { font-size: 1.8rem !important; margin-bottom: 6px !important; }
+    .feature-card h3 { font-size: 0.85rem !important; line-height: 1.2 !important; margin-bottom: 4px !important; }
+    .feature-card p { font-size: 0.7rem !important; line-height: 1.25 !important; }
+
+    /* 3. CTA BANNER & LOGO WA */
+    .cta-banner {
+        border-radius: 16px !important;
+        padding: 24px 14px !important;
+        margin: 24px 0 !important;
+    }
+
+    .cta-banner h2 { font-size: 1.15rem !important; line-height: 1.3 !important; }
+    .cta-banner p { font-size: 0.8rem !important; line-height: 1.35 !important; margin-bottom: 16px !important; }
+
     .cta-banner .btn-primary {
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 12px !important;              /* Jarak antara logo WA dan teks */
-        padding: 14px 24px !important;      /* Ketebalan tombol */
-        font-size: 0.95rem !important;      /* Ukuran teks tombol */
+        gap: 10px !important;
+        padding: 12px 16px !important;
+        font-size: 0.85rem !important;
         font-weight: 700 !important;
-        width: 100% !important;             /* Lebar penuh agar proporsional */
-    }
-    .cta-banner .btn-primary i {
-        font-size: 1.8rem !important;      /* Ukuran ikon WA diperbesar proporsional */
-        line-height: 1 !important;
-        margin-right: 0 !important;         /* Menggunakan gap flex untuk kerapian */
+        width: 100% !important;
     }
 
-    /* 4. Grid Katalog Produk */
+    .cta-banner .btn-primary i {
+        font-size: 1.6rem !important;
+        margin-right: 0 !important;
+    }
+
+    /* 4. KATALOG PRODUK GRID */
     .product-grid {
         grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 12px !important;
+        gap: 10px !important;
     }
     .product-img {
-        height: 155px !important;
+        height: 145px !important;
         padding: 8px !important;
     }
-    .product-img i { font-size: 4.5rem !important; }
+    .product-img i { font-size: 3.5rem !important; }
 
-    /* 5. Footer HP Rata */
+    /* 5. FOOTER HP RATA */
     footer {
         padding: 40px 0 20px;
         border-radius: 0 !important;
