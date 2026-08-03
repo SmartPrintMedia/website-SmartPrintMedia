@@ -204,6 +204,39 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     from { opacity: 0; transform: translateY(10px);}
     to { opacity: 1; transform: translateY(0);}
 }
+@media (max-width: 600px) {
+    /* 1. Memperkecil Ukuran Tombol Panah Slider (Kiri & Kanan) */
+    .slider-btn {
+        width: 28px !important;       /* Dari 45px diperkecil jadi 28px */
+        height: 28px !important;      /* Diperkecil jadi 28px */
+        font-size: 0.75rem !important; /* Ukuran ikon panah diperkecil */
+        background: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* Mengatur posisi jarak tombol dari pinggir layar HP */
+    .prev-btn {
+        left: 8px !important;
+    }
+
+    .next-btn {
+        right: 8px !important;
+    }
+
+    /* 2. Memperbesar Tampilan Ikon/Gambar Produk di Halaman Active Page */
+    .service-img {
+        height: 125px !important;     /* Menambah tinggi area gambar */
+        padding: 10px !important;
+    }
+
+    .service-img i {
+        font-size: 3.5rem !important; /* Memperbesar ikon produk */
+    }
+
+    .service-img img {
+        max-height: 110px !important;  /* Memperbesar elemen gambar */
+        object-fit: contain !important;
+    }
+}
 
 /* PROMO SLIDER */
 .promo-slider-section {
@@ -497,6 +530,70 @@ h1, h2, h3, .logo, .nav-links a, .btn {
         width: 100% !important;
         justify-content: center !important;
     }
+    /* ===== PERBAIKAN TAMPILAN MOBILE (HP) ===== */
+@media (max-width: 600px) {
+
+    /* 1. Memperbesar Ikon WA di CTA Banner */
+    .cta-banner .btn-primary {
+        font-size: 0.95rem !important;
+        padding: 12px 20px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    .cta-banner .btn-primary i {
+        font-size: 1.4rem !important; /* Diperbesar agar jelas */
+        margin-right: 4px !important;
+    }
+
+    /* 2. Memperkecil Tombol Panah Slider Banner (Kiri & Kanan) */
+    .slider-btn {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .prev-btn {
+        left: 8px !important;
+    }
+
+    .next-btn {
+        right: 8px !important;
+    }
+
+    /* 3. Memperbesar Gambar & Ikon Produk di HP */
+    /* Area Gambar & Ikon Layanan Unggulan (Home) */
+    .service-img {
+        height: 125px !important;
+        padding: 12px !important;
+    }
+
+    .service-img i {
+        font-size: 3.2rem !important; /* Ikon dibuat lebih besar */
+    }
+
+    .service-img img {
+        max-height: 100px !important;
+        object-fit: contain !important;
+    }
+
+    /* Area Gambar & Ikon Grid Produk (Katalog) */
+    .product-img {
+        height: 165px !important; /* Wadah dipertinggi dari 140px ke 165px */
+        padding: 8px !important;
+    }
+
+    .product-img i {
+        font-size: 4.5rem !important; /* Ikon produk diperbesar */
+    }
+
+    .grid-img-element {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
 
 /* ===== PRODUCT GRID & CARDS CLEAN LOOK (RESPONSIVE FIXED) ===== */
 .product-grid {
