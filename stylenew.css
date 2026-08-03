@@ -403,48 +403,72 @@ h1, h2, h3, .logo, .nav-links a, .btn {
         font-weight: 800 !important;
     }
     /* ===== RESPONSIF MENGAPA MEMILIH KAMI (2 KOLOM DI HP) ===== */
-@media (max-width: 600px) {
-    /* Mengubah grid Keunggulan menjadi 2 kolom */
+/* ===== OVERRIDE PAKSA LAYOUT 2 KOLOM DI HP ===== */
+@media screen and (max-width: 768px) {
+    /* 1. Paksa Mengapa Memilih Kami Jadi 2 Kolom */
     .feature-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Paksa 2 kolom setara */
         gap: 12px !important;
         margin: 20px 0 !important;
     }
 
-    /* Menyesuaikan ukuran kartu keunggulan */
     .feature-card {
         padding: 16px 10px !important;
-        border-radius: 18px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        text-align: center !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
     }
 
-    /* Ukuran ikon disesuaikan agar pas */
     .feature-icon {
-        font-size: 2rem !important;
-        margin-bottom: 10px !important;
+        font-size: 2.2rem !important;
+        margin-bottom: 8px !important;
     }
 
-    /* Ukuran judul keunggulan */
     .feature-card h3 {
-        font-size: 0.9rem !important;
-        line-height: 1.25 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.2 !important;
         margin-bottom: 6px !important;
     }
 
-    /* Ukuran deskripsi keunggulan */
     .feature-card p {
         font-size: 0.75rem !important;
         line-height: 1.3 !important;
     }
-}
 
-    /* Sembunyikan deskripsi panjang di HP agar rapi seperti katalog produk */
+    /* 2. Paksa Layanan Unggulan Jadi 2 Kolom */
+    .service-enhanced {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Paksa 2 kolom setara */
+        gap: 12px !important;
+        margin: 20px 0 !important;
+    }
+
+    .service-card {
+        border-radius: 16px !important;
+    }
+
+    .service-img {
+        padding: 16px 8px !important;
+        font-size: 2.2rem !important;
+    }
+
+    .service-info {
+        padding: 12px 8px !important;
+    }
+
+    .service-info h3 {
+        font-size: 0.9rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .price-tag {
+        font-size: 0.85rem !important;
+        margin: 6px 0 !important;
+    }
+
     .service-info p {
-        display: none !important;
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
     }
 }
 
