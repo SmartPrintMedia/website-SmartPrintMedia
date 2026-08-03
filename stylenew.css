@@ -74,7 +74,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     letter-spacing: 0.5px;
 }
 
-/* ===== TOMBOL HAMBURGER PREMIUM ===== */
+/* ===== TOMBOL HAMBURGER ===== */
 .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     z-index: 101;
 }
 
-.menu-toggle:hover{
+.menu-toggle:hover {
     background: rgba(15,82,186,.08);
 }
 
@@ -145,28 +145,9 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     border-bottom: 2px solid #D4AF37;
 }
 
-.menu-toggle.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-    transform: scale(0);
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-}
-
-@media (max-width: 780px) {
-    .logo-text h2 { font-size: 1.1rem; }
-    .logo-img { height: 45px; }
-    .nav-flex { padding: 12px 16px; }
-    .menu-toggle{ width:38px; height:30px; padding:5px; }
-    .menu-toggle span{ height:3px; }
-    .menu-toggle.active span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
-    .menu-toggle.active span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
-}
+.menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.menu-toggle.active span:nth-child(2) { opacity: 0; transform: scale(0); }
+.menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 /* Buttons */
 .btn-primary {
@@ -203,39 +184,6 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px);}
     to { opacity: 1; transform: translateY(0);}
-}
-@media (max-width: 600px) {
-    /* 1. Memperkecil Ukuran Tombol Panah Slider (Kiri & Kanan) */
-    .slider-btn {
-        width: 28px !important;       /* Dari 45px diperkecil jadi 28px */
-        height: 28px !important;      /* Diperkecil jadi 28px */
-        font-size: 0.75rem !important; /* Ukuran ikon panah diperkecil */
-        background: rgba(255, 255, 255, 0.9) !important;
-    }
-
-    /* Mengatur posisi jarak tombol dari pinggir layar HP */
-    .prev-btn {
-        left: 8px !important;
-    }
-
-    .next-btn {
-        right: 8px !important;
-    }
-
-    /* 2. Memperbesar Tampilan Ikon/Gambar Produk di Halaman Active Page */
-    .service-img {
-        height: 125px !important;     /* Menambah tinggi area gambar */
-        padding: 10px !important;
-    }
-
-    .service-img i {
-        font-size: 3.5rem !important; /* Memperbesar ikon produk */
-    }
-
-    .service-img img {
-        max-height: 110px !important;  /* Memperbesar elemen gambar */
-        object-fit: contain !important;
-    }
 }
 
 /* PROMO SLIDER */
@@ -356,39 +304,6 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 .feature-card h3 { font-size: 1.5rem; margin-bottom: 12px; color: #0F52BA; }
 .feature-card p { color: #4a5568; line-height: 1.5; }
 
-/* ===== OVERRIDE PAKSA LAYOUT 2 KOLOM DI HP ===== */
-@media screen and (max-width: 768px) {
-    /* 1. Paksa Mengapa Memilih Kami Jadi 2 Kolom */
-    .feature-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Paksa 2 kolom setara */
-        gap: 12px !important;
-        margin: 20px 0 !important;
-    }
-
-    .feature-card {
-        padding: 16px 10px !important;
-        border-radius: 16px !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
-    }
-
-    .feature-icon {
-        font-size: 2.2rem !important;
-        margin-bottom: 8px !important;
-    }
-
-    .feature-card h3 {
-        font-size: 0.95rem !important;
-        line-height: 1.2 !important;
-        margin-bottom: 6px !important;
-    }
-
-    .feature-card p {
-        font-size: 0.75rem !important;
-        line-height: 1.3 !important;
-    }
-}
-
 /* Layanan Unggulan */
 .service-enhanced {
     display: grid;
@@ -419,183 +334,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 .service-info h3 { font-size: 1.5rem; margin-bottom: 8px; color: #0F52BA; }
 .price-tag { font-size: 1.3rem; font-weight: 800; color: #D4AF37; margin: 12px 0; }
 
-/* ===== PENYESUAIAN MOBILE (HP) ===== */
-@media (max-width: 600px) {
-    /* 1. Layanan Unggulan di Home Menjadi 2 Kolom */
-    .service-enhanced {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-        margin: 20px 0 !important;
-    }
-
-    .service-card {
-        border-radius: 18px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        height: 100% !important;
-    }
-
-    .service-img {
-        padding: 20px 10px !important;
-        font-size: 2.5rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 110px !important;
-    }
-
-    .service-info {
-        padding: 12px 10px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        flex-grow: 1 !important;
-        justify-content: space-between !important;
-    }
-
-    .service-info h3 {
-        font-size: 0.95rem !important;
-        line-height: 1.25 !important;
-        margin-bottom: 4px !important;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2 !important;
-        -webkit-box-orient: vertical !important;
-        overflow: hidden !important;
-    }
-
-    .price-tag {
-        font-size: 0.85rem !important;
-        margin: 4px 0 0 0 !important;
-        font-weight: 800 !important;
-    }
-    /* 2. Paksa Layanan Unggulan Jadi 2 Kolom */
-    .service-enhanced {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Paksa 2 kolom setara */
-        gap: 12px !important;
-        margin: 20px 0 !important;
-    }
-
-    .service-card {
-        border-radius: 16px !important;
-    }
-
-    .service-img {
-        padding: 16px 8px !important;
-        font-size: 2.2rem !important;
-    }
-
-    .service-info {
-        padding: 12px 8px !important;
-    }
-
-    .service-info h3 {
-        font-size: 0.9rem !important;
-        line-height: 1.2 !important;
-    }
-
-    .price-tag {
-        font-size: 0.85rem !important;
-        margin: 6px 0 !important;
-    }
-
-    .service-info p {
-        font-size: 0.75rem !important;
-        line-height: 1.3 !important;
-    }
-}
-
-    /* 2. CTA Banner Agar Tidak Lonjong */
-    .cta-banner {
-        border-radius: 16px !important; /* Diubah dari 36px agar sudut tidak melengkung lonjong */
-        padding: 28px 16px !important;  /* Menyesuaikan padding agar tidak terlalu tinggi */
-        margin: 32px 0 !important;
-    }
-
-    .cta-banner h2 {
-        font-size: 1.25rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 12px !important;
-    }
-
-    .cta-banner p {
-        font-size: 0.85rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 20px !important;
-    }
-
-    .cta-banner .btn-primary {
-        font-size: 0.85rem !important;
-        padding: 10px 18px !important;
-        width: 100% !important;
-        justify-content: center !important;
-    }
-    /* ===== PERBAIKAN TAMPILAN MOBILE (HP) ===== */
-@media (max-width: 600px) {
-
-    /* 1. Memperbesar Ikon WA di CTA Banner */
-    .cta-banner .btn-primary {
-        font-size: 0.95rem !important;
-        padding: 12px 20px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 10px !important;
-    }
-
-    .cta-banner .btn-primary i {
-        font-size: 1.4rem !important; /* Diperbesar agar jelas */
-        margin-right: 4px !important;
-    }
-
-    /* 2. Memperkecil Tombol Panah Slider Banner (Kiri & Kanan) */
-    .slider-btn {
-        width: 30px !important;
-        height: 30px !important;
-        font-size: 0.85rem !important;
-    }
-
-    .prev-btn {
-        left: 8px !important;
-    }
-
-    .next-btn {
-        right: 8px !important;
-    }
-
-    /* 3. Memperbesar Gambar & Ikon Produk di HP */
-    /* Area Gambar & Ikon Layanan Unggulan (Home) */
-    .service-img {
-        height: 125px !important;
-        padding: 12px !important;
-    }
-
-    .service-img i {
-        font-size: 3.2rem !important; /* Ikon dibuat lebih besar */
-    }
-
-    .service-img img {
-        max-height: 100px !important;
-        object-fit: contain !important;
-    }
-
-    /* Area Gambar & Ikon Grid Produk (Katalog) */
-    .product-img {
-        height: 165px !important; /* Wadah dipertinggi dari 140px ke 165px */
-        padding: 8px !important;
-    }
-
-    .product-img i {
-        font-size: 4.5rem !important; /* Ikon produk diperbesar */
-    }
-
-    .grid-img-element {
-        height: 100% !important;
-        object-fit: cover !important;
-    }
-}
-
-/* ===== PRODUCT GRID & CARDS CLEAN LOOK (RESPONSIVE FIXED) ===== */
+/* ===== PRODUCT GRID ===== */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -682,27 +421,6 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 
 .product-info .detail {
     display: none !important;
-}
-
-/* ===== RESPONSIVE UTK SMARTPHONE (HP) ===== */
-@media (max-width: 600px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 12px;
-    }
-    .product-img {
-        height: 140px;
-        padding: 6px;
-    }
-    .product-info {
-        padding: 12px;
-    }
-    .product-info h3 {
-        font-size: 0.95rem;
-    }
-    .product-info .price {
-        font-size: 0.9rem;
-    }
 }
 
 /* Promo & Price Cards */
@@ -794,9 +512,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 .wa-btn-fixed a { color: white; font-size: 2rem; display: flex; }
 
 /* ================= DETAIL PRODUCT STYLING ================= */
-.clickable-product {
-    cursor: pointer;
-}
+.clickable-product { cursor: pointer; }
 .btn-back {
     background: transparent;
     border: 2px solid #0F52BA;
@@ -812,10 +528,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     align-items: center;
     gap: 8px;
 }
-.btn-back:hover {
-    background: #0F52BA;
-    color: white;
-}
+.btn-back:hover { background: #0F52BA; color: white; }
 .detail-wrapper-box {
     background: white;
     border-radius: 24px;
@@ -836,11 +549,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     justify-content: center;
     border-bottom: 1px solid #f0f4f8;
 }
-.detail-icon-box i {
-    font-size: 6rem;
-    color: #0F52BA;
-    padding: 60px;
-}
+.detail-icon-box i { font-size: 6rem; color: #0F52BA; padding: 60px; }
 .detail-img-element {
     display: none;
     width: 100%;
@@ -848,53 +557,14 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     object-fit: contain;
     display: block;
 }
-.detail-content-box {
-    padding: 32px;
-}
-.detail-content-box h2 {
-    font-size: 2rem;
-    color: #1e2a3a;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-.detail-price-tag {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #D4AF37;
-    margin-bottom: 16px;
-}
-.detail-divider {
-    border: 0;
-    border-top: 1px dashed #e2e8f0;
-    margin-bottom: 20px;
-}
-.detail-content-box h3 {
-    font-size: 1.1rem;
-    color: #0F52BA;
-    margin-bottom: 10px;
-}
-.detail-content-box p {
-    color: #4a5568;
-    line-height: 1.7;
-    font-size: 1rem;
-    margin-bottom: 28px;
-}
+.detail-content-box { padding: 32px; }
+.detail-content-box h2 { font-size: 2rem; color: #1e2a3a; margin-bottom: 8px; font-weight: 700; }
+.detail-price-tag { font-size: 1.4rem; font-weight: 800; color: #D4AF37; margin-bottom: 16px; }
+.detail-divider { border: 0; border-top: 1px dashed #e2e8f0; margin-bottom: 20px; }
+.detail-content-box h3 { font-size: 1.1rem; color: #0F52BA; margin-bottom: 10px; }
+.detail-content-box p { color: #4a5568; line-height: 1.7; font-size: 1rem; margin-bottom: 28px; }
 
-@media (min-width: 768px) {
-    .detail-wrapper-box {
-        flex-direction: column; 
-    }
-    .detail-icon-box {
-        width: 100%;
-    }
-    .detail-content-box {
-        width: 100%;
-        border-left: none;
-        padding: 36px;
-    }
-}
-
-/* ================= SEARCH BAR STYLING ================= */
+/* SEARCH BAR */
 .search-container {
     position: relative;
     max-width: 500px;
@@ -927,11 +597,9 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     transition: color 0.3s ease;
     pointer-events: none;
 }
-.search-container input[type="text"]:focus + .search-icon {
-    color: #0F52BA;
-}
+.search-container input[type="text"]:focus + .search-icon { color: #0F52BA; }
 
-/* ===== REVISI PREMIUM FOOTER (4 KOLOM LUXURY DESIGN) ===== */
+/* ===== FOOTER ===== */
 footer {
     background: linear-gradient(135deg, #071d3a, #0f366b);
     position: relative;
@@ -948,135 +616,30 @@ footer {
     gap: 40px;
 }
 
-.footer-col h3 {
-    color: #D4AF37;
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
-}
+.footer-col h3 { color: #D4AF37; font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; letter-spacing: 0.5px; }
+.footer-col h4 { color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 20px; position: relative; padding-bottom: 8px; }
+.footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 35px; height: 3px; background-color: #D4AF37; border-radius: 2px; }
+.footer-col p { color: #b8c7da; line-height: 1.6; font-size: 0.95rem; margin-bottom: 12px; }
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul li a { color: #b8c7da; text-decoration: none; font-size: 0.95rem; transition: all 0.2s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.footer-col ul li a i { font-size: 0.75rem; color: #D4AF37; margin: 0; transition: transform 0.2s; }
+.footer-col ul li a:hover { color: #ffffff; padding-left: 6px; }
+.footer-col ul li a:hover i { transform: translateX(3px); }
+.footer-col i { color: #D4AF37; margin-right: 8px; font-size: 1rem; }
+.footer-col hours-col p span { color: #ffffff; font-weight: 600; padding-left: 24px; }
 
-.footer-col h4 {
-    color: #ffffff;
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 8px;
-}
+.social-icons { margin-top: 20px; display: flex; gap: 16px; }
+.social-icons a { display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 8px 16px; border-radius: 30px; color: #D4AF37; text-decoration: none; font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(212, 175, 55, 0.2); transition: all 0.3s ease; }
+.social-icons a:hover { background: #D4AF37; color: #071d3a; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); transform: translateY(-2px); }
+.social-icons a i { color: inherit; margin-right: 8px; }
 
-.footer-col h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 35px;
-    height: 3px;
-    background-color: #D4AF37;
-    border-radius: 2px;
-}
+footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 40px 0 20px; }
+.footer-bottom { text-align: center; color: #D4AF37; font-size: 0.9rem; font-weight: 500; }
 
-.footer-col p {
-    color: #b8c7da;
-    line-height: 1.6;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-.footer-col ul li a {
-    color: #b8c7da;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-col ul li a i {
-    font-size: 0.75rem;
-    color: #D4AF37;
-    margin: 0;
-    transition: transform 0.2s;
-}
-
-.footer-col ul li a:hover {
-    color: #ffffff;
-    padding-left: 6px;
-}
-
-.footer-col ul li a:hover i {
-    transform: translateX(3px);
-}
-
-.footer-col i {
-    color: #D4AF37;
-    margin-right: 8px;
-    font-size: 1rem;
-}
-
-.footer-col hours-col p span {
-    color: #ffffff;
-    font-weight: 600;
-    padding-left: 24px;
-}
-
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 16px;
-}
-
-.social-icons a {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 8px 16px;
-    border-radius: 30px;
-    color: #D4AF37;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-    background: #D4AF37;
-    color: #071d3a;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-    transform: translateY(-2px);
-}
-
-.social-icons a i {
-    color: inherit;
-    margin-right: 8px;
-}
-
-footer hr {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 40px 0 20px;
-}
-
-.footer-bottom {
-    text-align: center;
-    color: #D4AF37;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-/* Media Queries Responsif Footer */
+/* =========================================================
+   MEDIA QUERIES (KHUSUS TAMPILAN MOBILE & TABLET DI PALING BATAH)
+   ========================================================= */
 @media (max-width: 992px) {
     .footer-flex {
         grid-template-columns: 1fr 1fr;
@@ -1084,10 +647,88 @@ footer hr {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 780px) {
+    .logo-text h2 { font-size: 1.1rem; }
+    .logo-img { height: 45px; }
+    .nav-flex { padding: 12px 16px; }
+    .menu-toggle { width:38px; height:30px; padding:5px; }
+    .menu-toggle span { height:3px; }
+    .menu-toggle.active span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+}
+
+@media (max-width: 600px) {
+    /* 1. Layanan Unggulan & Mengapa Memilih Kami Paksa 2 Kolom */
+    .service-enhanced,
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        margin: 20px 0 !important;
+    }
+
+    .service-card,
+    .feature-card {
+        border-radius: 16px !important;
+        padding: 12px 8px !important;
+    }
+
+    .service-img {
+        height: 125px !important;
+        padding: 10px !important;
+    }
+
+    .service-img i { font-size: 3.5rem !important; }
+    .service-img img { max-height: 110px !important; object-fit: contain !important; }
+    .service-info p { display: none !important; } /* Sembunyikan p agar kompak */
+
+    .feature-icon { font-size: 2rem !important; margin-bottom: 8px !important; }
+    .feature-card h3 { font-size: 0.9rem !important; line-height: 1.25 !important; }
+    .feature-card p { font-size: 0.75rem !important; line-height: 1.3 !important; }
+
+    /* 2. Tombol Slider Panah Diperkecil */
+    .slider-btn {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.75rem !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+    }
+    .prev-btn { left: 8px !important; }
+    .next-btn { right: 8px !important; }
+
+    /* 3. CTA Banner Tidak Lonjong & Icon WA Diperbesar */
+    .cta-banner {
+        border-radius: 16px !important;
+        padding: 28px 16px !important;
+        margin: 32px 0 !important;
+    }
+    .cta-banner h2 { font-size: 1.25rem !important; line-height: 1.3 !important; }
+    .cta-banner p { font-size: 0.85rem !important; line-height: 1.4 !important; }
+    .cta-banner .btn-primary {
+        font-size: 0.95rem !important;
+        padding: 12px 20px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .cta-banner .btn-primary i {
+        font-size: 1.4rem !important;
+        margin-right: 6px !important;
+    }
+
+    /* 4. Grid Katalog Produk */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px !important;
+    }
+    .product-img {
+        height: 155px !important;
+        padding: 8px !important;
+    }
+    .product-img i { font-size: 4.5rem !important; }
+
+    /* 5. Footer HP Rata */
     footer {
         padding: 40px 0 20px;
-       border-radius: 0;
+        border-radius: 0 !important;
     }
     .footer-flex {
         grid-template-columns: 1fr;
