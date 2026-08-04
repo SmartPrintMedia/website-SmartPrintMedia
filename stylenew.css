@@ -217,6 +217,8 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     object-fit: cover;
     display: block;
 }
+
+/* TOMBOL SLIDER (FIX PERBAIKAN WARNA PUTIH DI HP) */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -235,8 +237,22 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     transition: all 0.2s;
     z-index: 5;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
-.slider-btn:hover { background: #0F52BA; color: white; }
+
+.slider-btn:focus,
+.slider-btn:active {
+    background: rgba(255, 255, 255, 0.85);
+    color: #0F52BA;
+    outline: none;
+}
+
+.slider-btn:hover { 
+    background: #0F52BA; 
+    color: white; 
+}
+
 .prev-btn { left: 20px; }
 .next-btn { right: 20px; }
 .slider-dots {
@@ -255,6 +271,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent;
 }
 .dot.active {
     background: #D4AF37;
@@ -635,7 +652,7 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
 .footer-bottom { text-align: center; color: #D4AF37; font-size: 0.9rem; font-weight: 500; }
 
 /* =========================================================
-   MEDIA QUERIES (RESPONSIF TABLET & HP DI PALING BWAH)
+   MEDIA QUERIES (RESPONSIF TABLET & HP DI PALING BAWAH)
    ========================================================= */
 
 @media (max-width: 992px) {
@@ -676,12 +693,22 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         object-fit: cover !important;
     }
 
+    /* TOMBOL SLIDER HP PERBAIKAN STYLING MOBILE */
     .slider-btn {
         width: 32px !important;
         height: 32px !important;
         font-size: 0.85rem !important;
         background: rgba(255, 255, 255, 0.9) !important;
+        color: #0F52BA !important;
+        -webkit-tap-highlight-color: transparent !important;
     }
+
+    .slider-btn:focus,
+    .slider-btn:active {
+        background: rgba(255, 255, 255, 0.9) !important;
+        color: #0F52BA !important;
+    }
+
     .prev-btn { left: 8px !important; }
     .next-btn { right: 8px !important; }
 
