@@ -208,8 +208,8 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 .slide {
     min-width: 100%;
     width: 100%;
-    aspect-ratio: 1280 / 450;
-    background: #e2e8f0;
+    object-fit: contain;
+    display: block;
 }
 .slide img {
     width: 100%;
@@ -218,7 +218,7 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     display: block;
 }
 
-/* TOMBOL SLIDER (FIX PERBAIKAN WARNA PUTIH DI HP) */
+/* TOMBOL SLIDER */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -613,20 +613,20 @@ h1, h2, h3, .logo, .nav-links a, .btn {
 }
 .search-container input[type="text"]:focus + .search-icon { color: #0F52BA; }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER STYLING BASE ===== */
 footer {
     background: linear-gradient(135deg, #071d3a, #0f366b);
     position: relative;
     border-top: 4px solid #D4AF37;
     color: #e2e8f0;
     padding: 60px 0 24px;
-    border-radius: 0;
     margin-top: 80px;
 }
 
+/* Grid 3 Kolom setelah navigasi dihapus */
 .footer-flex {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1.2fr;
+    grid-template-columns: 1.5fr 1.2fr 1.2fr;
     gap: 40px;
 }
 
@@ -634,14 +634,36 @@ footer {
 .footer-col h4 { color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 20px; position: relative; padding-bottom: 8px; }
 .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 35px; height: 3px; background-color: #D4AF37; border-radius: 2px; }
 .footer-col p { color: #b8c7da; line-height: 1.6; font-size: 0.95rem; margin-bottom: 12px; }
-.footer-col ul { list-style: none; padding: 0; }
-.footer-col ul li { margin-bottom: 12px; }
-.footer-col ul li a { color: #b8c7da; text-decoration: none; font-size: 0.95rem; transition: all 0.2s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-.footer-col ul li a i { font-size: 0.75rem; color: #D4AF37; margin: 0; transition: transform 0.2s; }
-.footer-col ul li a:hover { color: #ffffff; padding-left: 6px; }
-.footer-col ul li a:hover i { transform: translateX(3px); }
 .footer-col i { color: #D4AF37; margin-right: 8px; font-size: 1rem; }
-.footer-col hours-col p span { color: #ffffff; font-weight: 600; padding-left: 24px; }
+
+/* STYLING JAM OPERASIONAL BASE */
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hours-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    padding: 10px 14px;
+    border-radius: 12px;
+}
+
+.hours-day {
+    color: #b8c7da;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.hours-time {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding-left: 24px;
+}
 
 .social-icons { margin-top: 20px; display: flex; gap: 16px; }
 .social-icons a { display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.05); padding: 8px 16px; border-radius: 30px; color: #D4AF37; text-decoration: none; font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(212, 175, 55, 0.2); transition: all 0.3s ease; }
@@ -673,7 +695,7 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
 }
 
 @media screen and (max-width: 600px) {
-    /* 1. BANNER PROMO TINGGI & JELAS */
+    /* BANNER PROMO TINGGI & JELAS */
     .promo-slider-section {
         padding: 8px 0 !important;
     }
@@ -693,7 +715,7 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         object-fit: cover !important;
     }
 
-    /* TOMBOL SLIDER HP PERBAIKAN STYLING MOBILE */
+    /* TOMBOL SLIDER HP */
     .slider-btn {
         width: 32px !important;
         height: 32px !important;
@@ -712,7 +734,7 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
     .prev-btn { left: 8px !important; }
     .next-btn { right: 8px !important; }
 
-    /* 2. LAYANAN UNGGULAN & MENGAPA MEMILIH KAMI (2 KOLOM SEJAJAR) */
+    /* LAYANAN UNGGULAN & KEUNGGULAN (2 KOLOM SEJAJAR) */
     .service-enhanced,
     .feature-grid {
         display: grid !important;
@@ -761,7 +783,7 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
     .feature-card h3 { font-size: 0.85rem !important; line-height: 1.2 !important; margin-bottom: 4px !important; }
     .feature-card p { font-size: 0.7rem !important; line-height: 1.25 !important; }
 
-    /* 3. CTA BANNER & LOGO WA */
+    /* CTA BANNER & LOGO WA */
     .cta-banner {
         border-radius: 16px !important;
         padding: 24px 14px !important;
@@ -787,7 +809,7 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         margin-right: 0 !important;
     }
 
-    /* 4. KATALOG PRODUK GRID & GAMBAR HP */
+    /* KATALOG PRODUK GRID HP */
     .product-grid {
         grid-template-columns: repeat(2, 1fr) !important; 
         gap: 10px !important;
@@ -798,13 +820,30 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
     }
     .product-img i { font-size: 3.5rem !important; }
 
-    /* 5. FOOTER HP RATA */
+    /* FOOTER & JAM OPERASIONAL KHUSUS HP */
     footer {
         padding: 40px 0 20px;
         border-radius: 0 !important;
     }
+
     .footer-flex {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .hours-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+    }
+
+    .hours-day {
+        margin-bottom: 0;
+    }
+
+    .hours-time {
+        padding-left: 0;
+        color: #FFD966;
     }
 }
