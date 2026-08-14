@@ -437,50 +437,6 @@ h1, h2, h3, .logo, .nav-links a, .btn {
     display: none !important;
 }
 
-/* Promo & Price Cards */
-.promo-banner {
-    background: linear-gradient(135deg, #fff9e8, #fff2d7);
-    border-radius: 24px;
-    padding: 24px;
-    margin: 30px 0 40px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    border-left: 6px solid #D4AF37;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-}
-.promo-banner i { font-size: 2.5rem; color: #D4AF37; }
-.promo-banner h3 { color: #8a6d1c; margin-bottom: 4px; }
-.promo-banner p { color: #5c4813; font-size: 0.95rem; }
-
-.price-card {
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.02);
-    transition: all 0.3s ease;
-}
-.price-card:hover {
-    border-color: #D4AF37;
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
-    transform: translateY(-4px);
-}
-.price-card h3 {
-    color: #0F52BA;
-    border-left: 4px solid #D4AF37;
-    padding-left: 12px;
-    font-size: 1.3rem;
-}
-.price-table div {
-    border-bottom: 1px dashed #e2e8f0;
-    padding: 12px 0;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.95rem;
-}
-.price-table div:last-child { border-bottom: none; }
-.price-table div span:first-child { font-weight: 600; }
-.price-table div span:last-child { color: #0F52BA; font-weight: 800; }
-.discount { color: #d32f2f !important; margin-left: 6px; }
-
 /* CTA Banner */
 .cta-banner {
     background: linear-gradient(135deg, #0F52BA, #1E3A8A);
@@ -623,7 +579,6 @@ footer {
     margin-top: 80px;
 }
 
-/* Grid 3 Kolom setelah navigasi dihapus */
 .footer-flex {
     display: grid;
     grid-template-columns: 1.5fr 1.2fr 1.2fr;
@@ -636,7 +591,6 @@ footer {
 .footer-col p { color: #b8c7da; line-height: 1.6; font-size: 0.95rem; margin-bottom: 12px; }
 .footer-col i { color: #D4AF37; margin-right: 8px; font-size: 1rem; }
 
-/* STYLING JAM OPERASIONAL BASE */
 .hours-list {
     display: flex;
     flex-direction: column;
@@ -673,10 +627,126 @@ footer {
 footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 40px 0 20px; }
 .footer-bottom { text-align: center; color: #D4AF37; font-size: 0.9rem; font-weight: 500; }
 
-/* =========================================================
-   MEDIA QUERIES (RESPONSIF TABLET & HP DI PALING BAWAH)
-   ========================================================= */
+/* ===== HALAMAN PROMO KHUSUS (ISOLATED CSS - PREVENT CONFLICT) ===== */
+.promo-grid-container {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
 
+.promo-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px 24px;
+    width: 380px;
+    max-width: 100%;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.promo-card:hover {
+    border-color: #D4AF37;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(15, 82, 186, 0.12);
+}
+
+.promo-card-header {
+    border-bottom: 2px dashed #e2e8f0;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.promo-card-header h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0F52BA;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-card-header .sub-specs {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.promo-table {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.promo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+}
+
+.promo-row.highlight {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.promo-row .qty {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.95rem;
+    flex: 1;
+}
+
+.promo-row .old-price {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+    margin-right: 12px;
+}
+
+.promo-row .new-price {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0F52BA;
+}
+
+.promo-row .new-price.best-price {
+    color: #d97706;
+    font-size: 1.05rem;
+}
+
+.btn-promo-order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #0F52BA;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(15, 82, 186, 0.25);
+}
+
+.btn-promo-order:hover {
+    background: #0a3d8f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 82, 186, 0.35);
+}
+
+/* ================= MEDIA QUERIES ================= */
 @media (max-width: 992px) {
     .footer-flex {
         grid-template-columns: 1fr 1fr;
@@ -695,7 +765,6 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
 }
 
 @media screen and (max-width: 600px) {
-    /* BANNER PROMO TINGGI & JELAS */
     .promo-slider-section {
         padding: 8px 0 !important;
     }
@@ -715,7 +784,6 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         object-fit: cover !important;
     }
 
-    /* TOMBOL SLIDER HP */
     .slider-btn {
         width: 32px !important;
         height: 32px !important;
@@ -734,7 +802,6 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
     .prev-btn { left: 8px !important; }
     .next-btn { right: 8px !important; }
 
-    /* LAYANAN UNGGULAN & KEUNGGULAN (2 KOLOM SEJAJAR) */
     .service-enhanced,
     .feature-grid {
         display: grid !important;
@@ -783,7 +850,6 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
     .feature-card h3 { font-size: 0.85rem !important; line-height: 1.2 !important; margin-bottom: 4px !important; }
     .feature-card p { font-size: 0.7rem !important; line-height: 1.25 !important; }
 
-    /* CTA BANNER & LOGO WA */
     .cta-banner {
         border-radius: 16px !important;
         padding: 24px 14px !important;
@@ -809,7 +875,6 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
         margin-right: 0 !important;
     }
 
-    /* KATALOG PRODUK GRID HP */
     .product-grid {
         grid-template-columns: repeat(2, 1fr) !important; 
         gap: 10px !important;
@@ -820,7 +885,6 @@ footer hr { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 4
     }
     .product-img i { font-size: 3.5rem !important; }
 
-    /* FOOTER & JAM OPERASIONAL KHUSUS HP */
     footer {
         padding: 40px 0 20px;
         border-radius: 0 !important;
